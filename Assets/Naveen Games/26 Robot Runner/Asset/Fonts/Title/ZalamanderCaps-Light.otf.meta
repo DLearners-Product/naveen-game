@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 1dd209bc0c902ef4588198857bebd464
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: ZalamanderCaps
+  fontNames:
+  - ZalamanderCaps
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: eae05781e00e5a74d86d01124c3f9ffb, type: 3}
+  - {fileID: 12800000, guid: fc7717a8274b59743b7f5942b3ff598d, type: 3}
+  - {fileID: 12800000, guid: e38a2dda198724143bbbe8e4f5e1ff03, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

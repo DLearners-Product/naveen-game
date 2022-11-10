@@ -1,0 +1,1176 @@
+fileFormatVersion: 2
+guid: 8e8bb384b29ed7a428e70831b3d37c77
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6146854169967005582
+    second: bg (8)_0
+  - first:
+      213: -4265741509532128298
+    second: bg (8)_1
+  - first:
+      213: 4588239864840983206
+    second: bg (8)_2
+  - first:
+      213: -7335483090676254675
+    second: bg (8)_3
+  - first:
+      213: -1345111796681588931
+    second: bg (8)_4
+  - first:
+      213: 1486517468251849650
+    second: bg (8)_5
+  - first:
+      213: 4390588848863172162
+    second: bg (8)_6
+  - first:
+      213: 5977650841428127223
+    second: bg (8)_7
+  - first:
+      213: -8441758685333910473
+    second: bg (8)_8
+  - first:
+      213: -9067215869064160614
+    second: bg (8)_9
+  - first:
+      213: 9108485944038226433
+    second: bg (8)_10
+  - first:
+      213: -6632621052944817251
+    second: bg (8)_11
+  - first:
+      213: 8008765085911972132
+    second: bg (8)_12
+  - first:
+      213: -8324676733078121605
+    second: bg (8)_13
+  - first:
+      213: 1603025162718854649
+    second: bg (8)_14
+  - first:
+      213: 1681265293114247913
+    second: bg (8)_15
+  - first:
+      213: -5200861046498277925
+    second: bg (8)_16
+  - first:
+      213: 744839932712599269
+    second: bg (8)_17
+  - first:
+      213: -4164483038813102429
+    second: bg (8)_18
+  - first:
+      213: 3694452852313493135
+    second: bg (8)_19
+  - first:
+      213: -3542170843517213939
+    second: bg (8)_20
+  - first:
+      213: -3747591020815391008
+    second: bg (8)_21
+  - first:
+      213: -8742265557887754287
+    second: bg (8)_22
+  - first:
+      213: 4647439390589624098
+    second: bg (8)_23
+  - first:
+      213: -3067053758116379543
+    second: bg (8)_24
+  - first:
+      213: -7554160861867066070
+    second: bg (8)_25
+  - first:
+      213: -894011913332729831
+    second: bg (8)_26
+  - first:
+      213: -6997708885175808811
+    second: bg (8)_27
+  - first:
+      213: 4857014637333675837
+    second: bg (8)_28
+  - first:
+      213: 4672253319754656144
+    second: bg (8)_29
+  - first:
+      213: -4652131570829306142
+    second: bg (8)_30
+  - first:
+      213: -7546475355348724117
+    second: bg (8)_31
+  - first:
+      213: 1459266483632832002
+    second: bg (8)_32
+  - first:
+      213: 7992693833442644390
+    second: bg (8)_33
+  - first:
+      213: 9004443282801385363
+    second: bg (8)_34
+  - first:
+      213: 2251728146582151537
+    second: bg (8)_35
+  - first:
+      213: -7467287034063255437
+    second: bg (8)_36
+  - first:
+      213: 2673314231645379626
+    second: bg (8)_37
+  - first:
+      213: 8858423689231324685
+    second: bg (8)_38
+  - first:
+      213: -1419780149323574684
+    second: bg (8)_39
+  - first:
+      213: -1612217690575428642
+    second: bg (8)_40
+  - first:
+      213: 5058645189031199077
+    second: bg (8)_41
+  - first:
+      213: 74742554121154913
+    second: bg (8)_42
+  - first:
+      213: 5432289326367166725
+    second: bg (8)_43
+  - first:
+      213: -4666360367656260030
+    second: bg (8)_44
+  - first:
+      213: -6470464369751608400
+    second: bg (8)_45
+  - first:
+      213: -3870537006430988160
+    second: bg (8)_46
+  - first:
+      213: -7249712471320278426
+    second: bg (8)_47
+  - first:
+      213: 9212646581425965995
+    second: bg (8)_48
+  - first:
+      213: -8353041687113521612
+    second: bg (8)_49
+  - first:
+      213: 7889538671089443176
+    second: bg (8)_50
+  - first:
+      213: -5108324600298744799
+    second: bg (8)_51
+  - first:
+      213: 3473512518171376333
+    second: bg (8)_52
+  - first:
+      213: 986462235396185637
+    second: bg (8)_53
+  - first:
+      213: 2715143808731719529
+    second: bg (8)_54
+  - first:
+      213: -5151973734629887968
+    second: bg (8)_55
+  - first:
+      213: -1917719915099426932
+    second: bg (8)_56
+  - first:
+      213: -2200239936304692542
+    second: bg (8)_57
+  - first:
+      213: -6340941587009241750
+    second: bg (8)_58
+  - first:
+      213: -8853622258487237726
+    second: bg (8)_59
+  - first:
+      213: 6411965737625104481
+    second: bg (8)_60
+  - first:
+      213: 144463447540642660
+    second: bg (8)_61
+  - first:
+      213: 912118983392595730
+    second: bg (8)_62
+  - first:
+      213: -6200428524416031151
+    second: bg (8)_63
+  - first:
+      213: 6880736806303529612
+    second: bg (8)_64
+  - first:
+      213: 1108549332824210319
+    second: bg (8)_65
+  - first:
+      213: 1330798655006184506
+    second: bg (8)_66
+  - first:
+      213: 1733765779755856989
+    second: bg (8)_67
+  - first:
+      213: 4159478588820104840
+    second: bg (8)_68
+  - first:
+      213: 369038204249591478
+    second: bg (8)_69
+  - first:
+      213: -6297341486866914863
+    second: bg (8)_70
+  - first:
+      213: -8796240386838280969
+    second: bg (8)_71
+  - first:
+      213: -1381809885974696545
+    second: bg (8)_72
+  - first:
+      213: 3697749513638498841
+    second: bg (8)_73
+  - first:
+      213: -3288694914353090912
+    second: bg (8)_74
+  - first:
+      213: 7479230934418645060
+    second: bg (8)_75
+  - first:
+      213: 3793932887648974557
+    second: bg (8)_76
+  - first:
+      213: 2451540632748476206
+    second: bg (8)_77
+  - first:
+      213: 8712644684734693618
+    second: bg (8)_78
+  - first:
+      213: 51989357839710201
+    second: bg (8)_79
+  - first:
+      213: -7526919769332229413
+    second: bg (8)_80
+  - first:
+      213: 2046754807272147749
+    second: bg (8)_81
+  - first:
+      213: 2486537979399004390
+    second: bg (8)_82
+  - first:
+      213: 7945672967189639917
+    second: bg (8)_83
+  - first:
+      213: 8040322554446296938
+    second: bg (8)_84
+  - first:
+      213: 1779221508248109177
+    second: bg (8)_85
+  - first:
+      213: 519514601742273784
+    second: bg (8)_86
+  - first:
+      213: -5270923258170940098
+    second: bg (8)_87
+  - first:
+      213: -6983937372798649444
+    second: bg (8)_88
+  - first:
+      213: -3042145987792671605
+    second: bg (8)_89
+  - first:
+      213: 4963630806758587731
+    second: bg (8)_90
+  - first:
+      213: -5684283458530295700
+    second: bg (8)_91
+  - first:
+      213: 5751719792575823674
+    second: bg (8)_92
+  - first:
+      213: 7563375686396826042
+    second: bg (8)_93
+  - first:
+      213: -1838631791848905770
+    second: bg (8)_94
+  - first:
+      213: -6936244328132028076
+    second: bg (8)_95
+  - first:
+      213: -2426301774173540189
+    second: bg (8)_96
+  - first:
+      213: -7402405446550098181
+    second: bg (8)_97
+  - first:
+      213: -7152796564710401735
+    second: bg (8)_98
+  - first:
+      213: -8651722599825669476
+    second: bg (8)_99
+  - first:
+      213: 1324611244275238544
+    second: bg (8)_100
+  - first:
+      213: -7335581015624889594
+    second: bg (8)_101
+  - first:
+      213: -7082068664735708583
+    second: bg (8)_102
+  - first:
+      213: 6099228704530000950
+    second: bg (8)_103
+  - first:
+      213: 6080080886729570310
+    second: bg (8)_104
+  - first:
+      213: -8000793963042393472
+    second: bg (8)_105
+  - first:
+      213: 5111998654116646668
+    second: bg (8)_106
+  - first:
+      213: -9057300774156766068
+    second: bg (8)_107
+  - first:
+      213: -647691663841719845
+    second: bg (8)_108
+  - first:
+      213: 8086015777704116649
+    second: bg (8)_109
+  - first:
+      213: -2775939189245085941
+    second: bg (8)_110
+  - first:
+      213: -5657763159600346844
+    second: bg (8)_111
+  - first:
+      213: 2773779532193484618
+    second: bg (8)_112
+  - first:
+      213: -2948489316920808696
+    second: bg (8)_113
+  - first:
+      213: 2198681619130686669
+    second: bg (8)_114
+  - first:
+      213: 1933869546924635900
+    second: bg (8)_115
+  - first:
+      213: 7540785018325233393
+    second: bg (8)_116
+  - first:
+      213: -3796996394389298693
+    second: bg (8)_117
+  - first:
+      213: 6011035501471263559
+    second: bg (8)_118
+  - first:
+      213: 4654720703127473799
+    second: bg (8)_119
+  - first:
+      213: 409657056991945495
+    second: bg (8)_120
+  - first:
+      213: 8525600849527448733
+    second: bg (8)_121
+  - first:
+      213: 2505932501558223603
+    second: bg (8)_122
+  - first:
+      213: -8919143426692087559
+    second: bg (8)_123
+  - first:
+      213: -1792518975553201596
+    second: bg (8)_124
+  - first:
+      213: 8153929234460817654
+    second: bg (8)_125
+  - first:
+      213: 1619817303695645817
+    second: bg (8)_126
+  - first:
+      213: -23346198587083055
+    second: bg (8)_127
+  - first:
+      213: 8107068388735844696
+    second: bg (8)_128
+  - first:
+      213: 3962027710371243666
+    second: bg (8)_129
+  - first:
+      213: 3167931988926849416
+    second: bg (8)_130
+  - first:
+      213: -1846384533664330182
+    second: bg (8)_131
+  - first:
+      213: -5912301323572059976
+    second: bg (8)_132
+  - first:
+      213: 1095935909053134535
+    second: bg (8)_133
+  - first:
+      213: -488793005638530708
+    second: bg (8)_134
+  - first:
+      213: -8286365832302582343
+    second: bg (8)_135
+  - first:
+      213: 8573458707089446294
+    second: bg (8)_136
+  - first:
+      213: -2592140316954872961
+    second: bg (8)_137
+  - first:
+      213: 2380888668609321093
+    second: bg (8)_138
+  - first:
+      213: -6801557316327494150
+    second: bg (8)_139
+  - first:
+      213: -5074223100915589213
+    second: bg (8)_140
+  - first:
+      213: 8164304988744490352
+    second: bg (8)_141
+  - first:
+      213: 582752465041924568
+    second: bg (8)_142
+  - first:
+      213: -4641678530676319842
+    second: bg (8)_143
+  - first:
+      213: -5598304964413034008
+    second: bg (8)_144
+  - first:
+      213: -400334175614596930
+    second: bg (8)_145
+  - first:
+      213: -7424198294041027028
+    second: bg (8)_146
+  - first:
+      213: 2698195067446465524
+    second: bg (8)_147
+  - first:
+      213: -450474704418075297
+    second: bg (8)_148
+  - first:
+      213: 8410133621669753730
+    second: bg (8)_149
+  - first:
+      213: 5888276349255100292
+    second: bg (8)_150
+  - first:
+      213: -3552144171559107826
+    second: bg (8)_151
+  - first:
+      213: -4889898324047286706
+    second: bg (8)_152
+  - first:
+      213: 4725011945913193531
+    second: bg (8)_153
+  - first:
+      213: 7178822018293648102
+    second: bg (8)_154
+  - first:
+      213: -5218109909350672403
+    second: bg (8)_155
+  - first:
+      213: -3617092883136340047
+    second: bg (8)_156
+  - first:
+      213: -4418677027946106999
+    second: bg (8)_157
+  - first:
+      213: -3283831760791491441
+    second: bg (8)_158
+  - first:
+      213: -1924145400905949683
+    second: bg (8)_159
+  - first:
+      213: -6214716419406386168
+    second: bg (8)_160
+  - first:
+      213: -7813162203864234735
+    second: bg (8)_161
+  - first:
+      213: 5385054814000179791
+    second: bg (8)_162
+  - first:
+      213: 7538708847617015972
+    second: bg (8)_163
+  - first:
+      213: -3023045986422805156
+    second: bg (8)_164
+  - first:
+      213: -2788019503456216540
+    second: bg (8)_165
+  - first:
+      213: 306435661039858824
+    second: bg (8)_166
+  - first:
+      213: -49915499953870598
+    second: bg (8)_167
+  - first:
+      213: -4299971808291914842
+    second: bg (8)_168
+  - first:
+      213: 9039975745952930247
+    second: bg (8)_169
+  - first:
+      213: 405815907841962741
+    second: bg (8)_170
+  - first:
+      213: -4015609744734398775
+    second: bg (8)_171
+  - first:
+      213: 147707517555942006
+    second: bg (8)_172
+  - first:
+      213: -2448904940193278195
+    second: bg (8)_173
+  - first:
+      213: 6024009149227866245
+    second: bg (8)_174
+  - first:
+      213: -8991943682969026710
+    second: bg (8)_175
+  - first:
+      213: -3760837801643349730
+    second: bg (8)_176
+  - first:
+      213: -8899097114832501223
+    second: bg (8)_177
+  - first:
+      213: 3840016600358440378
+    second: bg (8)_178
+  - first:
+      213: 4923544069283920920
+    second: bg (8)_179
+  - first:
+      213: -171170701690058180
+    second: bg (8)_180
+  - first:
+      213: -9204206373019681369
+    second: bg (8)_181
+  - first:
+      213: 3037135719889495072
+    second: bg (8)_182
+  - first:
+      213: -82871018131986367
+    second: bg (8)_183
+  - first:
+      213: -7613916933000538884
+    second: bg (8)_184
+  - first:
+      213: -6717263938925325007
+    second: bg (8)_185
+  - first:
+      213: 8317660689252742046
+    second: bg (8)_186
+  - first:
+      213: -1730796749418190378
+    second: bg (8)_187
+  - first:
+      213: -3904118307882689501
+    second: bg (8)_188
+  - first:
+      213: -6102349820762876470
+    second: bg (8)_189
+  - first:
+      213: -6123978568586796621
+    second: bg (8)_190
+  - first:
+      213: 8900144229247599899
+    second: bg (8)_191
+  - first:
+      213: 109756101558052884
+    second: bg (8)_192
+  - first:
+      213: -8616424979794656264
+    second: bg (8)_193
+  - first:
+      213: -3298345469137599477
+    second: bg (8)_194
+  - first:
+      213: 22170707437428841
+    second: bg (8)_195
+  - first:
+      213: -5241095413895367460
+    second: bg (8)_196
+  - first:
+      213: 4339538600741142343
+    second: bg (8)_197
+  - first:
+      213: 3698693826293598602
+    second: bg (8)_198
+  - first:
+      213: -5589998884902239267
+    second: bg (8)_199
+  - first:
+      213: -2870064212146742800
+    second: bg (8)_200
+  - first:
+      213: 7904114983755240800
+    second: bg (8)_201
+  - first:
+      213: -6936604752693243314
+    second: bg (8)_202
+  - first:
+      213: -2639263133011324771
+    second: bg (8)_203
+  - first:
+      213: 2574183346688519596
+    second: bg (8)_204
+  - first:
+      213: 6970907791864197971
+    second: bg (8)_205
+  - first:
+      213: 3611053424252960311
+    second: bg (8)_206
+  - first:
+      213: -3392321995776458248
+    second: bg (8)_207
+  - first:
+      213: -1651725853181228597
+    second: bg (8)_208
+  - first:
+      213: 9122181218686355085
+    second: bg (8)_209
+  - first:
+      213: -5449846337641342355
+    second: bg (8)_210
+  - first:
+      213: -4184023105319055714
+    second: bg (8)_211
+  - first:
+      213: 2631556782365408996
+    second: bg (8)_212
+  - first:
+      213: -2453082584617396127
+    second: bg (8)_213
+  - first:
+      213: 6045175028551163360
+    second: bg (8)_214
+  - first:
+      213: 1833486892568478385
+    second: bg (8)_215
+  - first:
+      213: 7499912327924283570
+    second: bg (8)_216
+  - first:
+      213: 3037740925171194479
+    second: bg (8)_217
+  - first:
+      213: 5275801071310302614
+    second: bg (8)_218
+  - first:
+      213: -3901551967934519313
+    second: bg (8)_219
+  - first:
+      213: 5995688485514595354
+    second: bg (8)_220
+  - first:
+      213: -4105025051449006200
+    second: bg (8)_221
+  - first:
+      213: -5700793751232483904
+    second: bg (8)_222
+  - first:
+      213: -8966169620196583750
+    second: bg (8)_223
+  - first:
+      213: -7401808962129475940
+    second: bg (8)_224
+  - first:
+      213: 7983143747848454398
+    second: bg (8)_225
+  - first:
+      213: 2823372174735090541
+    second: bg (8)_226
+  - first:
+      213: 4758345584627134643
+    second: bg (8)_227
+  - first:
+      213: 5880252241697601914
+    second: bg (8)_228
+  - first:
+      213: -6315832118988687782
+    second: bg (8)_229
+  - first:
+      213: 5484119851681513892
+    second: bg (8)_230
+  - first:
+      213: 5235284985236120958
+    second: bg (8)_231
+  - first:
+      213: -2718219435097942592
+    second: bg (8)_232
+  - first:
+      213: -4896069903301718676
+    second: bg (8)_233
+  - first:
+      213: -4415641827832972333
+    second: bg (8)_234
+  - first:
+      213: -4359099875784901066
+    second: bg (8)_235
+  - first:
+      213: 7641797378780518576
+    second: bg (8)_236
+  - first:
+      213: -4294037817339625333
+    second: bg (8)_237
+  - first:
+      213: 3474360412654827014
+    second: bg (8)_238
+  - first:
+      213: 909262164223487092
+    second: bg (8)_239
+  - first:
+      213: 6922009800176924925
+    second: bg (8)_240
+  - first:
+      213: -5349942049094292000
+    second: bg (8)_241
+  - first:
+      213: -3115523687657368538
+    second: bg (8)_242
+  - first:
+      213: 7439418043063936974
+    second: bg (8)_243
+  - first:
+      213: -6658838682344634311
+    second: bg (8)_244
+  - first:
+      213: 805422421938284102
+    second: bg (8)_245
+  - first:
+      213: -5635891130103413129
+    second: bg (8)_246
+  - first:
+      213: 5801480309617160349
+    second: bg (8)_247
+  - first:
+      213: -4436018067393310233
+    second: bg (8)_248
+  - first:
+      213: 5349449144102958532
+    second: bg (8)_249
+  - first:
+      213: 5083066070106855102
+    second: bg (8)_250
+  - first:
+      213: 2301615458685975812
+    second: bg (8)_251
+  - first:
+      213: 8711628920359332458
+    second: bg (8)_252
+  - first:
+      213: 1562742389917467924
+    second: bg (8)_253
+  - first:
+      213: -2298981934624390400
+    second: bg (8)_254
+  - first:
+      213: -2928938362895812794
+    second: bg (8)_255
+  - first:
+      213: 3227651147330831879
+    second: bg (8)_256
+  - first:
+      213: 6963853990347723764
+    second: bg (8)_257
+  - first:
+      213: -8631724599999061955
+    second: bg (8)_258
+  - first:
+      213: 593849749923208090
+    second: bg (8)_259
+  - first:
+      213: -4147759075034475956
+    second: bg (8)_260
+  - first:
+      213: -6416501891402015771
+    second: bg (8)_261
+  - first:
+      213: 1570421731487543322
+    second: bg (8)_262
+  - first:
+      213: -2464895255212183270
+    second: bg (8)_263
+  - first:
+      213: 7072766626617947903
+    second: bg (8)_264
+  - first:
+      213: 1745105602191853084
+    second: bg (8)_265
+  - first:
+      213: -3840107450981616935
+    second: bg (8)_266
+  - first:
+      213: 1671596341814437356
+    second: bg (8)_267
+  - first:
+      213: 6311126253476970373
+    second: bg (8)_268
+  - first:
+      213: 1580204815658374654
+    second: bg (8)_269
+  - first:
+      213: 7772198662805043466
+    second: bg (8)_270
+  - first:
+      213: 8341067831181343454
+    second: bg (8)_271
+  - first:
+      213: 908510862390317481
+    second: bg (8)_272
+  - first:
+      213: 184790067723365421
+    second: bg (8)_273
+  - first:
+      213: 8546239369551954504
+    second: bg (8)_274
+  - first:
+      213: 1281935285721328707
+    second: bg (8)_275
+  - first:
+      213: -3788217965125835876
+    second: bg (8)_276
+  - first:
+      213: 5078003862964676425
+    second: bg (8)_277
+  - first:
+      213: 4076295274424134887
+    second: bg (8)_278
+  - first:
+      213: -4202232231169016776
+    second: bg (8)_279
+  - first:
+      213: -769403985140255076
+    second: bg (8)_280
+  - first:
+      213: 6355400580754580595
+    second: bg (8)_281
+  - first:
+      213: -1500911282832235529
+    second: bg (8)_282
+  - first:
+      213: 2370735783019046953
+    second: bg (8)_283
+  - first:
+      213: 3289794037227017083
+    second: bg (8)_284
+  - first:
+      213: 3319495996343350868
+    second: bg (8)_285
+  - first:
+      213: 4247401803781129412
+    second: bg (8)_286
+  - first:
+      213: -8902897650420609778
+    second: bg (8)_287
+  - first:
+      213: 616886222562896813
+    second: bg (8)_288
+  - first:
+      213: -7480603778257698746
+    second: bg (8)_289
+  - first:
+      213: -6214697938271286008
+    second: bg (8)_290
+  - first:
+      213: -8436534414455133122
+    second: bg (8)_291
+  - first:
+      213: -143661264160187367
+    second: bg (8)_292
+  - first:
+      213: -7261688851913550003
+    second: bg (8)_293
+  - first:
+      213: -5366119667649510119
+    second: bg (8)_294
+  - first:
+      213: 6796834915710649559
+    second: bg (8)_295
+  - first:
+      213: -7374674933567182305
+    second: bg (8)_296
+  - first:
+      213: 1746143965195594776
+    second: bg (8)_297
+  - first:
+      213: -8534659041884078262
+    second: bg (8)_298
+  - first:
+      213: 6616641457393770740
+    second: bg (8)_299
+  - first:
+      213: 538446307275791797
+    second: bg (8)_300
+  - first:
+      213: 8801924061504163417
+    second: bg (8)_301
+  - first:
+      213: -834036145999836174
+    second: bg (8)_302
+  - first:
+      213: 4774070488923495452
+    second: bg (8)_303
+  - first:
+      213: -3708902725122856578
+    second: bg (8)_304
+  - first:
+      213: -1979491584755585949
+    second: bg (8)_305
+  - first:
+      213: 2330090018674044015
+    second: bg (8)_306
+  - first:
+      213: -6841910340646583182
+    second: bg (8)_307
+  - first:
+      213: 2766217617693926776
+    second: bg (8)_308
+  - first:
+      213: 7804530475760961334
+    second: bg (8)_309
+  - first:
+      213: -7334576761919214479
+    second: bg (8)_310
+  - first:
+      213: -8869662241647190654
+    second: bg (8)_311
+  - first:
+      213: 1563756412312336735
+    second: bg (8)_312
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg (8)_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 10
+        width: 1474
+        height: 987
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270fcf823bcf1baa0800000000000000
+      internalID: -6146854169967005582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg (8)_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1008
+        width: 1977
+        height: 973
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbe2bca2ba0dc4c0800000000000000
+      internalID: -4265741509532128298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg (8)_2
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 713
+        width: 295
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a21228f8d3bcaf30800000000000000
+      internalID: 4588239864840983206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg (8)_3
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 263
+        width: 237
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d287b5c7ef0233a90800000000000000
+      internalID: -7335483090676254675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg (8)_4
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 12
+        width: 411
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f3b9792f3355de0800000000000000
+      internalID: -1345111796681588931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
