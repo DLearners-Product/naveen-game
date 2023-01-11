@@ -37467,11 +37467,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tarzan
       objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937190, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c0824cc9b4d8eb42af420e449afe2d2, type: 3}
 --- !u!1001 &3940815163042474318
