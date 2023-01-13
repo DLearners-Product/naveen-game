@@ -704,7 +704,7 @@ public class Tarzan_Main : MonoBehaviour
         {
             G_Player.SetActive(true);
             Frog_Follow.OBJ_followingCamera.B_canfollow = true;
-            THI_CloneLevel();
+            // THI_CloneLevel();
             
         }
         

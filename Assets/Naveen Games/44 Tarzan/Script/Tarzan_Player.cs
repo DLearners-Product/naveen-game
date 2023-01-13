@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tarzan_Player : MonoBehaviour
 {
+    Rigidbody2D rb;
     LineRenderer LR_Rope;
     public Camera Cam;
     public GameObject[] GA_Circles;
@@ -20,15 +21,29 @@ public class Tarzan_Player : MonoBehaviour
     public float[] F_Array;
     public float minDistance;
     int Index;
+    public Vector2 F_playerVelocity;
+    [SerializeField]
+    bool B_landedOnMushroom;
+    Vector2 forceApplyDirection;
+
+    [Header("Force Applied")]
+    public float F_forceApplied;
+    public float F_horizontalForceApplied;
+    public float F_dragForce;
+    float previousAppliedDirection;
+    
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         DJ2D = GetComponent<DistanceJoint2D>();
         DJ2D.enabled = false;
         LR_Rope = this.transform.GetChild(0).GetComponent<LineRenderer>();
-       
+        previousAppliedDirection = 0;
+
         pos = transform.position;
         V3_StartPos = transform.position;
+        B_landedOnMushroom = false;
     }
     public void THI_GetCircles()
     {
@@ -46,134 +61,49 @@ public class Tarzan_Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* if (transition)
-        {
-            elapsed += Time.deltaTime / duration;
-           // Debug.Log("Elapsed ==" + elapsed);
-            Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, F_CamZoomout, elapsed);
+        PlayerMovement();
+        PlayerAnimation();
+    }
+
+    void PlayerMovement(){
+        F_playerVelocity = rb.velocity;
+
+        if(rb.velocity.magnitude < 0)
+            rb.velocity = rb.velocity * F_dragForce;
+
+        if(B_landedOnMushroom || Input.GetButton("Horizontal")){
+        // if(B_landedOnMushroom){
+            // if(B_landedOnMushroom && (previousAppliedDirection != Input.GetAxis("Horizontal")))
+            if(B_landedOnMushroom)
+                rb.velocity = Vector2.zero;
+            
+            if(Input.GetButton("Horizontal")){
+                forceApplyDirection = new Vector2(
+                    Input.GetAxis("Horizontal") * F_horizontalForceApplied,
+                    ((B_landedOnMushroom) ? (1  * F_forceApplied) : rb.velocity.y)
+                );
+            }else{
+                forceApplyDirection = Vector2.up * F_forceApplied;
+            }
+
+            B_landedOnMushroom = false;
+
+            // rb.AddForce(forceApplyDirection, ForceMode2D.Impulse);
+            rb.velocity = forceApplyDirection;
         }
-        if (B_transition)
-        {
-            elapsed += Time.deltaTime / duration;
-            Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, F_CamZoomin, elapsed);
-            if (elapsed > 1.0f)
-            {
-                B_transition = false;
-                elapsed = 0;
-            }
-        }*/
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            AS_Empty.clip = ACA_Clips[0];
-            AS_Empty.Play();
-            F_Timertoturn = 0;
-
-            pos = transform.position;
-           
-            OnDrawGizmos();
-            F_Array = new float[GA_Circles.Length];
-            for (int i=0;i<GA_Circles.Length;i++)
-            {
-                float range = Vector3.Distance(this.transform.position, GA_Circles[i].transform.position);
-                F_Array[i] = range;
-            }
-
-            minDistance = Mathf.Min(F_Array);
-
-            for (int i = 0; i < F_Array.Length; i++)
-            {
-                if (minDistance == F_Array[i])
-                {
-                    Index = i;
-                }
-            }
-
-             GA_Circles[Index].transform.GetChild(0).gameObject.SetActive(true);
-             G_Catchthis = GA_Circles[Index];
-             DJ2D.connectedAnchor = G_Catchthis.transform.position;
-
-
-             LR_Rope.SetPosition(0, G_Catchthis.transform.position);
-             LR_Rope.SetPosition(1, this.transform.GetChild(0).transform.position);
-
-             LR_Rope.enabled = true;
-             DJ2D.enabled = true;
-
-
-        }
-        if(Input.GetMouseButtonUp(0))
-        {
-            AS_Empty.clip = ACA_Clips[1];
-            AS_Empty.Play();
-            /* B_transition = true;
-             transition = false;
-             elapsed = 0;*/
-            F_Timertoturn = 0;
-            B_CanCount = true;
-
-            for (int i = 0; i < GA_Circles.Length; i++)
-            {
-                GA_Circles[i].transform.GetChild(0).gameObject.SetActive(false);
-            }
-            pos = this.transform.position;
-            DJ2D.enabled = false;
-            LR_Rope.enabled = false;
-            G_Catchthis = null;
-        }
-
-        if (DJ2D.enabled)
-        {
-            LR_Rope.SetPosition(1, this.transform.GetChild(0).transform.position);
-        }
-
-        if(G_Catchthis!=null)
-        {
-            if(B_CanCount)
-            F_Timertoturn = F_Timertoturn + 1f*Time.deltaTime;
-
-            if (G_Catchthis.transform.position.x < transform.position.x)
-            {
-                this.transform.localScale = new Vector3(1f, 1f, 1f);
-            }
-            else
-            {
-                if (F_Timertoturn > 5)
-                {
-                    B_CanCount = false;
-                    this.transform.localScale = new Vector3(-1f, 1f, 1f);
-                }
-                    
-            }
-        }
-        else
-        {
-            //if (B_CanCount)
-            //    F_Timertoturn = F_Timertoturn + 1f * Time.deltaTime;
-
-            if (pos.x < transform.position.x)
-            {
-               // if (F_Timertoturn > 5)
-               // {
-                  //  B_CanCount = false;
-                    this.transform.localScale = new Vector3(1f, 1f, 1f);
-               // }
-                    
-            }
-            else
-            {
-               // if (F_Timertoturn > 5)
-               // {
-                      B_CanCount = false;
-                    this.transform.localScale = new Vector3(-1f, 1f, 1f);
-               // }
-            }
-        }
-       
-      
-
     }
     
+    void PlayerAnimation(){
+        Vector2 playerFacingDirection = rb.velocity.normalized;
+
+        Debug.Log("Player Facing Direction : "+playerFacingDirection);
+
+        transform.forward = new Vector2(
+            playerFacingDirection.x,
+            0f
+        );
+    }
+
     private void OnDrawGizmos()
     {
         if (G_Catchthis == null)
@@ -184,8 +114,11 @@ public class Tarzan_Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Collision entered");
         if(collision.gameObject.name=="Ground")
         {
+            rb.velocity = Vector2.zero;
+
             AS_Empty.clip = ACA_Clips[2];
             AS_Empty.Play();
             Invoke(nameof(THI_StartPos),1f);
@@ -198,10 +131,15 @@ public class Tarzan_Player : MonoBehaviour
             Tarzan_Main.Instance.G_Question.SetActive(true);
             this.gameObject.SetActive(false);
         }
+
+        if(collision.gameObject.GetComponent<Mushroom>()){
+            B_landedOnMushroom = true;
+        }
     }
 
     public void THI_StartPos()
     {
+        rb.velocity = Vector2.zero;
         this.transform.position = V3_StartPos;
     }
 }
