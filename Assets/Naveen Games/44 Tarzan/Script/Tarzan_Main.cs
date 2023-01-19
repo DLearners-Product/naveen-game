@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 public class Tarzan_Main : MonoBehaviour
 {
     public static Tarzan_Main Instance;
+    public float F_quesAllocPer;
+    public GameObject[] GA_mushrooms;
+    public AllocatedQuestions[] AD_questionAllocated;
     public bool B_production;
 
     [Header("Screens and UI elements")]
@@ -93,8 +96,7 @@ public class Tarzan_Main : MonoBehaviour
     public AudioClip[] ACA__questionClips;
     public AudioClip[] ACA_optionClips;
     public AudioClip[] ACA_instructionClips;
-    // Start is called before the first frame update
-    // Start is called before the first frame update
+
     private void Awake()
     {
         Instance = this;
@@ -114,7 +116,11 @@ public class Tarzan_Main : MonoBehaviour
             SendValueURL = "http://103.117.180.121:8000/test/Game_template_api-s/save_child_questions.php"; // UAT SEND DATA
         }
 
+        I_currentQuestionCount = 10;
+        AD_questionAllocated = new AllocatedQuestions[I_currentQuestionCount];
+        THI_AllocateQuestion();
     }
+
     void Start()
     {
         B_CloseDemo = true;
@@ -707,7 +713,48 @@ public class Tarzan_Main : MonoBehaviour
             // THI_CloneLevel();
             
         }
-        
+    }
+
+    void THI_AllocateQuestion(){
+        float percent;
+        int questionCount = 0;
+        Debug.Log("Question Count : "+questionCount);
+        while(questionCount < I_currentQuestionCount){
+            for(int i=0; i < GA_mushrooms.Length; i++){
+                percent = Random.Range(1, 100);
+                if(percent >= F_quesAllocPer){
+                    Debug.Log(GA_mushrooms[i].gameObject.name, GA_mushrooms[i].gameObject);
+                    Debug.Log("Question Count : "+questionCount);
+                    AD_questionAllocated[questionCount] = new AllocatedQuestions();
+
+                    AD_questionAllocated[questionCount].selectedMushroom = GA_mushrooms[i].gameObject;
+
+                    for(int j=0; j < GA_mushrooms[i].gameObject.transform.childCount; j++){
+                        Debug.Log("Mushroom Name : "+GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.name, GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject);
+
+                        AD_questionAllocated[questionCount].mushrooms.Add(GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>());
+                    }
+                    AD_questionAllocated[questionCount].I_questionID = questionCount;
+                    questionCount++;
+                    Debug.Log("Question Count : "+questionCount);
+                    Debug.Log("Current Ques Count : "+I_currentQuestionCount);
+                    if(!(questionCount < I_currentQuestionCount))
+                        break;
+                }
+            }
+            Debug.Log("In Loop...");
+        }
+        Debug.Log("Exited loop.........");
     }
 }
 
+[System.Serializable]
+public class AllocatedQuestions{
+    public int I_questionID;
+    public GameObject selectedMushroom;
+    public List<Mushroom> mushrooms;
+    public AllocatedQuestions(){
+        Debug.Log("Object instantiated");
+        mushrooms = new List<Mushroom>();
+    }
+}

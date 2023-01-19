@@ -21,7 +21,9 @@ public class Tarzan_Player : MonoBehaviour
     public float[] F_Array;
     public float minDistance;
     int Index;
-    public Vector2 F_playerVelocity;
+    public Vector2 playerVelocity;
+    public float F_playerMagnitude;
+
     [SerializeField]
     bool B_landedOnMushroom;
     Vector2 forceApplyDirection;
@@ -66,7 +68,8 @@ public class Tarzan_Player : MonoBehaviour
     }
 
     void PlayerMovement(){
-        F_playerVelocity = rb.velocity;
+        playerVelocity = rb.velocity;
+        F_playerMagnitude = rb.velocity.magnitude;
 
         if(rb.velocity.magnitude < 0)
             rb.velocity = rb.velocity * F_dragForce;
@@ -80,11 +83,12 @@ public class Tarzan_Player : MonoBehaviour
             if(Input.GetButton("Horizontal")){
                 forceApplyDirection = new Vector2(
                     Input.GetAxis("Horizontal") * F_horizontalForceApplied,
-                    ((B_landedOnMushroom) ? (1  * F_forceApplied) : rb.velocity.y)
+                    ((B_landedOnMushroom) ? F_forceApplied : rb.velocity.y)
                 );
             }else{
                 forceApplyDirection = Vector2.up * F_forceApplied;
             }
+            // forceApplyDirection = new Vector2();
 
             B_landedOnMushroom = false;
 
@@ -98,10 +102,10 @@ public class Tarzan_Player : MonoBehaviour
 
         Debug.Log("Player Facing Direction : "+playerFacingDirection);
 
-        transform.forward = new Vector2(
-            playerFacingDirection.x,
-            0f
-        );
+        // transform.forward = new Vector2(
+        //     playerFacingDirection.x,
+        //     0f
+        // );
     }
 
     private void OnDrawGizmos()
