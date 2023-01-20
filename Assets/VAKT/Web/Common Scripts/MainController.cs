@@ -86,7 +86,7 @@ public class MainController : MonoBehaviour
               mode = "live";
 
             // Live ID's
-             STR_GameID = "413"; //train sorting
+             STR_GameID = "525";
             //  STR_GameID = "619"; //fish sorting
             //  STR_GameID = "404"; //fruit ninja
             //  STR_GameID = "322"; //Domino arrange

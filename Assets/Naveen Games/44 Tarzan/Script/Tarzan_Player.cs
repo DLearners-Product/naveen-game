@@ -103,8 +103,6 @@ public class Tarzan_Player : MonoBehaviour
     void PlayerAnimation(){
         Vector2 playerFacingDirection = rb.velocity.normalized;
 
-        Debug.Log("Player Facing Direction : "+playerFacingDirection);
-
         // transform.forward = new Vector2(
         //     playerFacingDirection.x,
         //     0f
@@ -142,9 +140,11 @@ public class Tarzan_Player : MonoBehaviour
             B_landedOnMushroom = true;
             if(collision.gameObject.GetComponent<Mushroom>().I_questionID != 0){
                 Tarzan_Main.Instance.G_Question.SetActive(true);
-                Tarzan_Main.Instance.THI_DeAllocateQuestion(collision.gameObject.GetInstanceID());
+
+                Debug.Log("Game Object Name : "+collision.gameObject.transform.parent.gameObject.name+" Game Object Instance ID : "+collision.gameObject.transform.parent.GetInstanceID(), collision.gameObject.transform.parent.gameObject);
+
+                Tarzan_Main.Instance.THI_DeAllocateQuestion(collision.gameObject.transform.parent.gameObject);
                 B_blockInput = true;
-                // this.gameObject.SetActive(false);
             }
         }
     }

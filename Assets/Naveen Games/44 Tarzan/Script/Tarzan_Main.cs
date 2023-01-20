@@ -14,6 +14,10 @@ public class Tarzan_Main : MonoBehaviour
     public float F_quesAllocPer;
     public GameObject[] GA_mushrooms;
     public AllocatedQuestions[] AD_questionAllocated;
+    public GameObject G_questionImage;
+    public GameObject G_2OptionPanel,
+                    G_3optionPanel,
+                    G_4OptionPanel;
     public bool B_production;
 
     [Header("Screens and UI elements")]
@@ -77,6 +81,7 @@ public class Tarzan_Main : MonoBehaviour
     public List<string> STRL_quesitonAudios;
     public List<string> STRL_optionAudios;
     public List<string> STRL_instructionAudio;
+    public Sprite[] SPRA_Options;
     public List<string> STRL_questionID;
     public string STR_customizationKey;
     //Dummy values only for helicopter game
@@ -143,6 +148,7 @@ public class Tarzan_Main : MonoBehaviour
         I_Dummmy = 0;
         I_Counter = 0;
     }
+
     private void Update()
     {
         if (!G_Demo.activeInHierarchy && B_CloseDemo)
@@ -150,7 +156,6 @@ public class Tarzan_Main : MonoBehaviour
             B_CloseDemo = false;
             DemoOver();
         }
-
     }
 
     public void BUT_Submit()
@@ -492,12 +497,41 @@ public class Tarzan_Main : MonoBehaviour
 
             StartCoroutine(EN_getAudioClips());
             StartCoroutine(IN_CoverImage());
-            StartCoroutine(IMG_Options());
-
+            StartCoroutine(IMG_Question());
+            StartCoroutine(IMG_Option());
         }
     }
 
-    public IEnumerator IMG_Options()
+    public IEnumerator IMG_Option()
+    {
+
+        SPRA_Options = new Sprite[STRL_options.Count];
+        // yield return new WaitForSeconds(0.01f);
+        //  Q_Img();
+
+        for (int i = 0; i < STRL_options.Count; i++)
+        {
+            UnityWebRequest www = UnityWebRequestTexture.GetTexture(STRL_options[i]);
+            yield return www.SendWebRequest();
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Texture2D downloadedTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+
+                SPRA_Options[i] = Sprite.Create(downloadedTexture, new Rect(0.0f, 0.0f, downloadedTexture.width, downloadedTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
+
+                string[] Names = (STRL_options[i].Split('/'));
+                string[] Finalname = (Names[Names.Length - 1].Split('.'));
+
+                SPRA_Options[i].name = Finalname[0];
+            }
+        }
+    }
+
+    public IEnumerator IMG_Question()
     {
 
         SPRA_Questions = new Sprite[STRL_questions.Count];
@@ -647,7 +681,8 @@ public class Tarzan_Main : MonoBehaviour
        
         StartCoroutine(EN_getAudioClips());
         StartCoroutine(IN_CoverImage());
-        StartCoroutine(IMG_Options());
+        StartCoroutine(IMG_Question());
+        StartCoroutine(IMG_Option());
 
         // THI_createOptions();
     }
@@ -722,36 +757,37 @@ public class Tarzan_Main : MonoBehaviour
             for(int i=0; i < GA_mushrooms.Length; i++){
                 percent = Random.Range(1, 100);
                 if(percent >= F_quesAllocPer){
-                    Debug.Log(GA_mushrooms[i].gameObject.name, GA_mushrooms[i].gameObject);
+                    // Debug.Log(GA_mushrooms[i].gameObject.name, GA_mushrooms[i].gameObject);
                     AD_questionAllocated[questionCount] = new AllocatedQuestions();
 
                     AD_questionAllocated[questionCount].selectedMushroom = GA_mushrooms[i].gameObject;
 
                     for(int j=0; j < GA_mushrooms[i].gameObject.transform.childCount; j++){
-                        Debug.Log("Mushroom Name : "+GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.name, GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject);
+                        // Debug.Log("Mushroom Name : "+GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.name, GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject);
 
                         AD_questionAllocated[questionCount].mushrooms.Add(GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>());
                         GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>().I_questionID = questionCount;
                     }
                     AD_questionAllocated[questionCount].I_questionID = questionCount;
                     questionCount++;
-                    Debug.Log("Question Count : "+questionCount);
-                    Debug.Log("Current Ques Count : "+I_currentQuestionCount);
+                    // Debug.Log("Question Count : "+questionCount);
+                    // Debug.Log("Current Ques Count : "+I_currentQuestionCount);
                     if(!(questionCount < I_currentQuestionCount))
                         break;
                 }
             }
-            Debug.Log("In Loop...");
         }
-        Debug.Log("Exited loop.........");
     }
 
-    public void THI_DeAllocateQuestion(float gameObjectInstanceID){
+    public void THI_DeAllocateQuestion(GameObject gameObjectInstanceID){
+        // Debug.Log("Jumped Mushroom : "+gameObjectInstanceID.gameObject.name+" "+gameObjectInstanceID.gameObject.GetInstanceID(), gameObjectInstanceID.gameObject);
         for(int i=0; i < AD_questionAllocated.Length; i++){
-            if(AD_questionAllocated[i].selectedMushroom.GetInstanceID() == gameObjectInstanceID){
+            // Debug.Log("Allocated Instance ID : "+AD_questionAllocated[i].selectedMushroom.GetInstanceID(), AD_questionAllocated[i].selectedMushroom);
+            if(AD_questionAllocated[i].selectedMushroom.GetInstanceID() == gameObjectInstanceID.GetInstanceID()){
                 for(int j=0; j < AD_questionAllocated[i].mushrooms.Count; j++){
                     AD_questionAllocated[i].mushrooms[j].I_questionID = 0;
                 }
+                break;
             }
         }
     }
