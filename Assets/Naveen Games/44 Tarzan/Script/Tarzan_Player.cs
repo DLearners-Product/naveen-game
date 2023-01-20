@@ -25,7 +25,8 @@ public class Tarzan_Player : MonoBehaviour
     public float F_playerMagnitude;
 
     [SerializeField]
-    bool B_landedOnMushroom;
+    bool B_landedOnMushroom,
+        B_blockInput;
     Vector2 forceApplyDirection;
 
     [Header("Force Applied")]
@@ -45,7 +46,9 @@ public class Tarzan_Player : MonoBehaviour
 
         pos = transform.position;
         V3_StartPos = transform.position;
+
         B_landedOnMushroom = false;
+        B_blockInput = false;
     }
     public void THI_GetCircles()
     {
@@ -74,13 +77,13 @@ public class Tarzan_Player : MonoBehaviour
         if(rb.velocity.magnitude < 0)
             rb.velocity = rb.velocity * F_dragForce;
 
-        if(B_landedOnMushroom || Input.GetButton("Horizontal")){
+        if(B_landedOnMushroom || (Input.GetButton("Horizontal") && !B_blockInput)){
         // if(B_landedOnMushroom){
             // if(B_landedOnMushroom && (previousAppliedDirection != Input.GetAxis("Horizontal")))
             if(B_landedOnMushroom)
                 rb.velocity = Vector2.zero;
             
-            if(Input.GetButton("Horizontal")){
+            if(Input.GetButton("Horizontal") && !B_blockInput){
                 forceApplyDirection = new Vector2(
                     Input.GetAxis("Horizontal") * F_horizontalForceApplied,
                     ((B_landedOnMushroom) ? F_forceApplied : rb.velocity.y)
@@ -118,7 +121,6 @@ public class Tarzan_Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision entered");
         if(collision.gameObject.name=="Ground")
         {
             rb.velocity = Vector2.zero;
@@ -138,6 +140,12 @@ public class Tarzan_Player : MonoBehaviour
 
         if(collision.gameObject.GetComponent<Mushroom>()){
             B_landedOnMushroom = true;
+            if(collision.gameObject.GetComponent<Mushroom>().I_questionID != 0){
+                Tarzan_Main.Instance.G_Question.SetActive(true);
+                Tarzan_Main.Instance.THI_DeAllocateQuestion(collision.gameObject.GetInstanceID());
+                B_blockInput = true;
+                // this.gameObject.SetActive(false);
+            }
         }
     }
 

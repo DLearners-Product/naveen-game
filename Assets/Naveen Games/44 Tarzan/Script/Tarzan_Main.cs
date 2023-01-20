@@ -718,13 +718,11 @@ public class Tarzan_Main : MonoBehaviour
     void THI_AllocateQuestion(){
         float percent;
         int questionCount = 0;
-        Debug.Log("Question Count : "+questionCount);
         while(questionCount < I_currentQuestionCount){
             for(int i=0; i < GA_mushrooms.Length; i++){
                 percent = Random.Range(1, 100);
                 if(percent >= F_quesAllocPer){
                     Debug.Log(GA_mushrooms[i].gameObject.name, GA_mushrooms[i].gameObject);
-                    Debug.Log("Question Count : "+questionCount);
                     AD_questionAllocated[questionCount] = new AllocatedQuestions();
 
                     AD_questionAllocated[questionCount].selectedMushroom = GA_mushrooms[i].gameObject;
@@ -733,6 +731,7 @@ public class Tarzan_Main : MonoBehaviour
                         Debug.Log("Mushroom Name : "+GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.name, GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject);
 
                         AD_questionAllocated[questionCount].mushrooms.Add(GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>());
+                        GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>().I_questionID = questionCount;
                     }
                     AD_questionAllocated[questionCount].I_questionID = questionCount;
                     questionCount++;
@@ -745,6 +744,16 @@ public class Tarzan_Main : MonoBehaviour
             Debug.Log("In Loop...");
         }
         Debug.Log("Exited loop.........");
+    }
+
+    public void THI_DeAllocateQuestion(float gameObjectInstanceID){
+        for(int i=0; i < AD_questionAllocated.Length; i++){
+            if(AD_questionAllocated[i].selectedMushroom.GetInstanceID() == gameObjectInstanceID){
+                for(int j=0; j < AD_questionAllocated[i].mushrooms.Count; j++){
+                    AD_questionAllocated[i].mushrooms[j].I_questionID = 0;
+                }
+            }
+        }
     }
 }
 
