@@ -23,6 +23,7 @@ public class Rope_sim : MonoBehaviour
         {
             this.ropeSegments.Add(new RopeSegment(ropeStartPoint));
             ropeStartPoint.y -= ropeSegLen;
+            
         }
     }
 

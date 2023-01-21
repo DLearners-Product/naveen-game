@@ -37467,6 +37467,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tarzan
       objectReference: {fileID: 0}
+    - target: {fileID: 4026323354185937190, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c0824cc9b4d8eb42af420e449afe2d2, type: 3}
 --- !u!1001 &3940815163042474318
@@ -40163,6 +40168,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8767668099926721197, guid: c528fda388ddc874ab53db88ba54d7ed,
+        type: 3}
+      propertyPath: segmentLength
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8767668100153764078, guid: c528fda388ddc874ab53db88ba54d7ed,
         type: 3}
       propertyPath: m_RootOrder
@@ -40226,7 +40236,12 @@ PrefabInstance:
     - target: {fileID: 8767668100153764079, guid: c528fda388ddc874ab53db88ba54d7ed,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767668101395569689, guid: c528fda388ddc874ab53db88ba54d7ed,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c528fda388ddc874ab53db88ba54d7ed, type: 3}

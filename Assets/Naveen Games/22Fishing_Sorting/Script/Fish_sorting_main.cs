@@ -43,7 +43,7 @@ public class Fish_sorting_main : MonoBehaviour
     public GameObject G_Lerppos;
     public GameObject G_FishingRope;
     public GameObject G_Bear;
-    public bool B_Down, B_Up, B_Lerp, B_Correct;
+    public bool B_Down, B_Up, B_Lerp, B_Correct, B_Left, B_Right;
     Vector3 tmpPos;
     string animname;
     int I_Attempt;
@@ -134,7 +134,7 @@ public class Fish_sorting_main : MonoBehaviour
     {
         G_Game.SetActive(false);
         B_CloseDemo = true;
-        B_Up = B_Down = false;
+        B_Up = B_Down = B_Left = B_Right = false;
         
         G_Transition.SetActive(false);
         G_levelComplete.SetActive(false);
@@ -207,6 +207,18 @@ public class Fish_sorting_main : MonoBehaviour
                 Debug.Log("Move Down " + B_Up + "  " + G_hook.transform.position);
 
             }
+            if (B_Left)
+            {
+                Debug.Log("Move Left");
+                G_hook.transform.Translate(Vector3.left * 5f * Time.deltaTime);
+                B_Left = false;
+            }
+            if (B_Right)
+            {
+                Debug.Log("Move Right");
+                G_hook.transform.Translate(Vector3.right * 5f * Time.deltaTime);
+                B_Right = false;
+            }
         }
 
        
@@ -218,6 +230,15 @@ public class Fish_sorting_main : MonoBehaviour
             {
                 B_Down = true;
             }
+            if(Input.GetKey(KeyCode.LeftArrow))
+            {
+                B_Left = true;
+            }
+           if (Input.GetKey(KeyCode.RightArrow))
+           {
+                B_Right = true;
+           }
+      
         
 
 
