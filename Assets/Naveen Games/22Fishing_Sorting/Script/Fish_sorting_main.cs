@@ -39,6 +39,7 @@ public class Fish_sorting_main : MonoBehaviour
     public GameObject G_Question;
     public GameObject G_hook;
     public GameObject G_BGlayer;
+    public GameObject G_BGlayerHz;
     public GameObject G_Bucket;
     public GameObject G_Lerppos;
     public GameObject G_FishingRope;
@@ -192,30 +193,30 @@ public class Fish_sorting_main : MonoBehaviour
         {
             if (B_Down)
             {
-                Debug.Log("Move Down");
+                //Debug.Log("Move Down");
                 G_hook.transform.Translate(Vector3.down * 10f * Time.deltaTime);
                 // G_FishingRope.GetComponent<Rope_sim>().segmentLength++;
                 B_Down = false;
-                Debug.Log("Move Down "+ B_Down + "  "+G_hook.transform.position);
+                //Debug.Log("Move Down "+ B_Down + "  "+G_hook.transform.position);
             }
             if (B_Up)
             {
-                Debug.Log("Move Up");
+                //Debug.Log("Move Up");
                 G_hook.transform.Translate(Vector3.up * 10f * Time.deltaTime);
                 // G_FishingRope.GetComponent<Rope_sim>().segmentLength--;
                 B_Up = false;
-                Debug.Log("Move Down " + B_Up + "  " + G_hook.transform.position);
+                //Debug.Log("Move Down " + B_Up + "  " + G_hook.transform.position);
 
             }
             if (B_Left)
             {
-                Debug.Log("Move Left");
+                //Debug.Log("Move Left");
                 G_hook.transform.Translate(Vector3.left * 5f * Time.deltaTime);
                 B_Left = false;
             }
             if (B_Right)
             {
-                Debug.Log("Move Right");
+                //Debug.Log("Move Right");
                 G_hook.transform.Translate(Vector3.right * 5f * Time.deltaTime);
                 B_Right = false;
             }
@@ -248,10 +249,11 @@ public class Fish_sorting_main : MonoBehaviour
             G_hook.transform.position = Vector3.Lerp(G_hook.transform.position, G_Lerppos.transform.position, 0.01f);
             // G_hook.transform.GetChild(0).transform.rotation;
         }
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return))
         {
             if (B_CanClick)
             {
+                
                 OffLerp();
                 B_CanClick = false;
             }
@@ -747,6 +749,7 @@ public class Fish_sorting_main : MonoBehaviour
     {
         EventSystem.current.currentSelectedGameObject.GetComponent<AudioSource>().Play();
         Debug.Log("player clicked. so playing audio");
+        
     }
     public void THI_getPreviewData()
     {

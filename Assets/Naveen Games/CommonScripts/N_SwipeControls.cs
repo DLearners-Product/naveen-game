@@ -90,6 +90,10 @@ public class N_SwipeControls : MonoBehaviour
                     {
                         Monkey_Player.Instance.PUB_Directionselect(1);
                     }
+                    if(Fish_sorting_main.Instance!=null)
+                    {
+                        Fish_sorting_main.Instance.B_Left = true;
+                    }
                    
 
                     // Debug.Log("left");
@@ -107,6 +111,10 @@ public class N_SwipeControls : MonoBehaviour
                     if (Monkey_Player.Instance != null)
                     {
                         Monkey_Player.Instance.PUB_Directionselect(0);
+                    }
+                    if(Fish_sorting_main.Instance!=null)
+                    {
+                        Fish_sorting_main.Instance.B_Right = true;
                     }
                     
                     //  Debug.Log("right");
