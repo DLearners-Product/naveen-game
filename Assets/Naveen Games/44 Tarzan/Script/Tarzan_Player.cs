@@ -138,8 +138,8 @@ public class Tarzan_Player : MonoBehaviour
 
         if(collision.gameObject.GetComponent<Mushroom>()){
             B_landedOnMushroom = true;
-            if(collision.gameObject.GetComponent<Mushroom>().I_questionID != 0){
-                Tarzan_Main.Instance.G_Question.SetActive(true);
+            if(collision.gameObject.GetComponent<Mushroom>().B_questionALlocated){
+                Tarzan_Main.Instance.THI_SpawnQuestion();
 
                 Debug.Log("Game Object Name : "+collision.gameObject.transform.parent.gameObject.name+" Game Object Instance ID : "+collision.gameObject.transform.parent.GetInstanceID(), collision.gameObject.transform.parent.gameObject);
 

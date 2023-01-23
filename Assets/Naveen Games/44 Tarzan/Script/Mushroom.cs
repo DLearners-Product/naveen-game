@@ -6,11 +6,11 @@ public class Mushroom : MonoBehaviour
 {
     Animator Anim;
     bool B_CallOnce;
-    public int I_questionID;
+    public bool B_questionALlocated;
     // Start is called before the first frame update
     void Start()
     {
-        I_questionID = 0;
+        B_questionALlocated = false;
         Anim = this.GetComponent<Animator>();
         OffAnim();
     }
@@ -27,10 +27,6 @@ public class Mushroom : MonoBehaviour
             Anim.Play("effect");
             Invoke(nameof(OffAnim), 2f);
         }
-    }
-
-    public void SetQuestion(int questionID){
-        I_questionID = questionID;
     }
 
     void OffAnim()
