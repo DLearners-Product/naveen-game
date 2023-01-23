@@ -18,6 +18,7 @@ public class Tarzan_Main : MonoBehaviour
     public GameObject G_2OptionPanel,
                     G_3optionPanel,
                     G_4OptionPanel;
+    private GameObject[] G_selectedOption;
     public bool B_production;
 
     [Header("Screens and UI elements")]
@@ -185,13 +186,22 @@ public class Tarzan_Main : MonoBehaviour
 
     public void BUT_Submit()
     {
-        STR_currentSelectedAnswer = G_Question.transform.GetChild(0).transform.GetChild(1).GetComponent<TMP_InputField>().text;
-        THI_TrackGameData("");
+        foreach(var toggle in G_optionImagePanel.GetComponent<ToggleGroup>().ActiveToggles()){
+            STR_currentSelectedAnswer = toggle.gameObject.name;
+            if(toggle.gameObject.name == STRL_answers[I_currentQuestionCount]){
+                THI_TrackGameData("1");
+            }else{
+                THI_TrackGameData("0");
+            }
+        }
+        // STR_currentSelectedAnswer = G_Question.transform.GetChild(0).transform.GetChild(1).GetComponent<TMP_InputField>().text;
         if(I_currentQuestionCount<STRL_questions.Count-1)
         {
+            
             G_Question.SetActive(false);
-            THI_CloneLevel();
-            G_Player.GetComponent<Tarzan_Player>().THI_StartPos();
+            G_Player.GetComponent<Tarzan_Player>().B_blockInput = false;
+
+            // G_Player.GetComponent<Tarzan_Player>().THI_StartPos();
         }
         else
         {
@@ -305,7 +315,8 @@ public class Tarzan_Main : MonoBehaviour
             G_questionImage.GetComponent<Image>().sprite = SPRA_Questions[I_currentQuestionCount];
             for(int i=0; i < G_optionImagePanel.transform.childCount; i++, I_currentOptionStartingCount++){
 
-                G_optionImagePanel.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = SPRA_Options[I_currentOptionStartingCount];
+                G_optionImagePanel.transform.GetChild(i).gameObject.transform.GetChild(0).GetComponent<Image>().sprite = SPRA_Options[I_currentOptionStartingCount];
+                G_optionImagePanel.transform.GetChild(i).gameObject.name = SPRA_Options[I_currentOptionStartingCount].name;
 
             }
 

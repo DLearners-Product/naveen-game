@@ -25,8 +25,8 @@ public class Tarzan_Player : MonoBehaviour
     public float F_playerMagnitude;
 
     [SerializeField]
-    bool B_landedOnMushroom,
-        B_blockInput;
+    bool B_landedOnMushroom;
+    public bool B_blockInput;
     Vector2 forceApplyDirection;
 
     [Header("Force Applied")]
@@ -74,7 +74,7 @@ public class Tarzan_Player : MonoBehaviour
         playerVelocity = rb.velocity;
         F_playerMagnitude = rb.velocity.magnitude;
 
-        if(rb.velocity.magnitude < 0)
+        if(rb.velocity.y < 0 || !B_landedOnMushroom)
             rb.velocity = rb.velocity * F_dragForce;
 
         if(B_landedOnMushroom || (Input.GetButton("Horizontal") && !B_blockInput)){
