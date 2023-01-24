@@ -44,7 +44,7 @@ public class Fish_sorting_main : MonoBehaviour
     public GameObject G_Lerppos;
     public GameObject G_FishingRope;
     public GameObject G_Bear;
-    public GameObject ClickedFish;
+    public List <GameObject> G_ClickedFish;
     public bool B_Down, B_Up, B_Lerp, B_Correct, B_Left, B_Right;
     Vector3 tmpPos;
     string animname;
@@ -195,10 +195,15 @@ public class Fish_sorting_main : MonoBehaviour
         {
             if (B_FishClicked)
             {
+                for (int i = 0; i < G_ClickedFish.Count; i++)
+                {
+                    GameObject clickedFish = G_ClickedFish[i];
+                    G_hook.transform.position = Vector3.MoveTowards(G_hook.transform.position, clickedFish.transform.position, 10 * Time.deltaTime);
+                }
                 //Debug.Log("Move Down");
-                G_hook.transform.position = Vector3.MoveTowards(G_hook.transform.position, ClickedFish.transform.position, 10 * Time.deltaTime);
+               
                 // G_FishingRope.GetComponent<Rope_sim>().segmentLength++;
-                B_Down = false;
+                //B_Down = false;
                 //Debug.Log("Move Down "+ B_Down + "  "+G_hook.transform.position);
             }
            /* if (B_Up)
@@ -296,6 +301,7 @@ public class Fish_sorting_main : MonoBehaviour
     public void THI_Catched()
     {
         B_CanCatched = false;
+        B_FishClicked = false;
        // Debug.Log("B_CanCatched " + B_CanCatched+ G_hook.transform.position);
         
         StopCoroutine(SpawnFish());
@@ -309,8 +315,16 @@ public class Fish_sorting_main : MonoBehaviour
         }
 
         Invoke(nameof(THI_LateClick), 2f);
+
+        Invoke(nameof(THI_ListClear), 3f);
+        
         
        // Invoke("OffLerp", 2f);        
+    }
+    
+    void THI_ListClear()
+    {
+        G_ClickedFish.Clear();
     }
     void THI_LateClick()
     {
