@@ -26,6 +26,7 @@ public class Tarzan_Player : MonoBehaviour
 
     [SerializeField]
     bool B_landedOnMushroom;
+    bool B_appliedDragChild;
     public bool B_blockInput;
     Vector2 forceApplyDirection;
 
@@ -47,7 +48,8 @@ public class Tarzan_Player : MonoBehaviour
         pos = transform.position;
         V3_StartPos = transform.position;
 
-        B_landedOnMushroom = false;
+        B_landedOnMushroom = true;
+        B_appliedDragChild = false;
         B_blockInput = false;
     }
     public void THI_GetCircles()
@@ -74,8 +76,10 @@ public class Tarzan_Player : MonoBehaviour
         playerVelocity = rb.velocity;
         F_playerMagnitude = rb.velocity.magnitude;
 
-        if(rb.velocity.y < 0 || !B_landedOnMushroom)
+        if((rb.velocity.y < 0 || !B_landedOnMushroom) && B_appliedDragChild){
+            B_appliedDragChild = false;
             rb.velocity = rb.velocity * F_dragForce;
+        }
 
         if(B_landedOnMushroom || (Input.GetButton("Horizontal") && !B_blockInput)){
         // if(B_landedOnMushroom){
@@ -138,6 +142,7 @@ public class Tarzan_Player : MonoBehaviour
 
         if(collision.gameObject.GetComponent<Mushroom>()){
             B_landedOnMushroom = true;
+            B_appliedDragChild = true;
             if(collision.gameObject.GetComponent<Mushroom>().B_questionALlocated){
                 Tarzan_Main.Instance.THI_SpawnQuestion();
 
