@@ -44,6 +44,7 @@ public class Fish_sorting_main : MonoBehaviour
     public GameObject G_Lerppos;
     public GameObject G_FishingRope;
     public GameObject G_Bear;
+    public GameObject ClickedFish;
     public bool B_Down, B_Up, B_Lerp, B_Correct, B_Left, B_Right;
     Vector3 tmpPos;
     string animname;
@@ -54,6 +55,7 @@ public class Fish_sorting_main : MonoBehaviour
     public Image IMG_Progress;
     float F_Progess;
     public bool B_CanCatched;
+    public bool B_FishClicked;
 
     [Header("Values")]
     public string STR_currentQuestionAnswer;
@@ -191,15 +193,15 @@ public class Fish_sorting_main : MonoBehaviour
 
         if (B_Fishspawn && B_CanCatched)
         {
-            if (B_Down)
+            if (B_FishClicked)
             {
                 //Debug.Log("Move Down");
-                G_hook.transform.Translate(Vector3.down * 10f * Time.deltaTime);
+                G_hook.transform.position = Vector3.MoveTowards(G_hook.transform.position, ClickedFish.transform.position, 10 * Time.deltaTime);
                 // G_FishingRope.GetComponent<Rope_sim>().segmentLength++;
                 B_Down = false;
                 //Debug.Log("Move Down "+ B_Down + "  "+G_hook.transform.position);
             }
-            if (B_Up)
+           /* if (B_Up)
             {
                 //Debug.Log("Move Up");
                 G_hook.transform.Translate(Vector3.up * 10f * Time.deltaTime);
@@ -219,11 +221,11 @@ public class Fish_sorting_main : MonoBehaviour
                 //Debug.Log("Move Right");
                 G_hook.transform.Translate(Vector3.right * 5f * Time.deltaTime);
                 B_Right = false;
-            }
+            }*/
         }
 
        
-            if(Input.GetKey(KeyCode.UpArrow))
+          /*  if(Input.GetKey(KeyCode.UpArrow))
             {
                 B_Up = true;
             }
@@ -238,7 +240,7 @@ public class Fish_sorting_main : MonoBehaviour
            if (Input.GetKey(KeyCode.RightArrow))
            {
                 B_Right = true;
-           }
+           }*/
       
         
 

@@ -17,6 +17,12 @@ public class FS_Fish : MonoBehaviour
         {
             this.transform.Translate(Vector3.left *speed* Time.deltaTime);
         }
+        if(Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("FishClicked");
+            Fish_sorting_main.Instance.B_FishClicked = true;
+            Fish_sorting_main.Instance.ClickedFish = this.gameObject;
+        }
        
     }
     private void OnTriggerEnter2D(Collider2D collision)
