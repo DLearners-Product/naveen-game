@@ -138,7 +138,7 @@ public class Tarzan_Player : MonoBehaviour
         {
             Frog_Follow.OBJ_followingCamera.B_canfollow = false;
             Tarzan_Main.Instance.AS_LevelOver.Play();
-            Tarzan_Main.Instance.G_Question.SetActive(true);
+            Tarzan_Main.Instance.THI_Levelcompleted();
             this.gameObject.SetActive(false);
         }
 

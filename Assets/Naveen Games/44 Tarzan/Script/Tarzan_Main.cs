@@ -109,7 +109,10 @@ public class Tarzan_Main : MonoBehaviour
 
     public void THI_SpawnQuestion(){
         G_Question.SetActive(true);
+
+        G_Question.GetComponent<Animator>().SetFloat("Direction", 1);
         G_Question.GetComponent<Animator>().Play("questionPanelExpand");
+
         switch (I_optionCount)
         {
             case 2:
@@ -197,17 +200,31 @@ public class Tarzan_Main : MonoBehaviour
         // STR_currentSelectedAnswer = G_Question.transform.GetChild(0).transform.GetChild(1).GetComponent<TMP_InputField>().text;
         if(I_currentQuestionCount<STRL_questions.Count-1)
         {
-            
-            G_Question.SetActive(false);
-            G_Player.GetComponent<Tarzan_Player>().B_blockInput = false;
+            float animatClipLength = 0f;
 
-            // G_Player.GetComponent<Tarzan_Player>().THI_StartPos();
+            foreach(var animation in G_Question.GetComponent<Animator>().runtimeAnimatorController.animationClips){
+                Debug.Log("Animation Name : "+animation.name);
+                if(animation.name == "questionPanelExpand"){
+                    animatClipLength = animation.length;
+                    break;
+                }
+            }
+            Debug.Log("animation Clip length : "+animatClipLength);
+            G_Question.GetComponent<Animator>().SetFloat("Direction", -1f);
+            G_Question.GetComponent<Animator>().Play("questionPanelExpand", -1, float.NegativeInfinity);
+
+            Invoke(nameof(THI_DisableQuestion), animatClipLength + 0.5f);
         }
-        else
-        {
-            THI_Levelcompleted();
-        }
+        // else
+        // {
+        //     THI_Levelcompleted();
+        // }
         
+    }
+
+    void THI_DisableQuestion(){
+        G_Question.SetActive(false);
+        G_Player.GetComponent<Tarzan_Player>().B_blockInput = false;
     }
 
     void THI_gameData()
@@ -302,7 +319,7 @@ public class Tarzan_Main : MonoBehaviour
     {
 
         // G_Transition.SetActive(false);
-        if (I_currentQuestionCount < STRL_questions.Count - 1)
+        if (I_currentQuestionCount <= STRL_questions.Count)
         {
             I_currentQuestionCount++;
 
@@ -344,7 +361,7 @@ public class Tarzan_Main : MonoBehaviour
 
 
 
-    void THI_Levelcompleted()
+    public void THI_Levelcompleted()
     {
         MainController.instance.I_TotalPoints = I_Points;
         G_levelComplete.SetActive(true);
