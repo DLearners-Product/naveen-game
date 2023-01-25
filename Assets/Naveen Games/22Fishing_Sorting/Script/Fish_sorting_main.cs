@@ -44,7 +44,7 @@ public class Fish_sorting_main : MonoBehaviour
     public GameObject G_Lerppos;
     public GameObject G_FishingRope;
     public GameObject G_Bear;
-    public List <GameObject> G_ClickedFish;
+    public GameObject G_ClickedFish;
     public bool B_Down, B_Up, B_Lerp, B_Correct, B_Left, B_Right;
     Vector3 tmpPos;
     string animname;
@@ -195,38 +195,48 @@ public class Fish_sorting_main : MonoBehaviour
         {
             if (B_FishClicked)
             {
-                for (int i = 0; i < G_ClickedFish.Count; i++)
-                {
-                    GameObject clickedFish = G_ClickedFish[i];
-                    G_hook.transform.position = Vector3.MoveTowards(G_hook.transform.position, clickedFish.transform.position, 10 * Time.deltaTime);
-                }
+                 
+    
+              G_hook.transform.position = Vector3.MoveTowards(G_hook.transform.position, G_ClickedFish.transform.position, 10 * Time.deltaTime);
+                
                 //Debug.Log("Move Down");
                
                 // G_FishingRope.GetComponent<Rope_sim>().segmentLength++;
                 //B_Down = false;
                 //Debug.Log("Move Down "+ B_Down + "  "+G_hook.transform.position);
             }
-           /* if (B_Up)
+         
+            /*
+            if (B_Down)
             {
                 //Debug.Log("Move Up");
-                G_hook.transform.Translate(Vector3.up * 10f * Time.deltaTime);
+                G_hook.transform.Translate(Vector3.down * 10f * Time.deltaTime);
                 // G_FishingRope.GetComponent<Rope_sim>().segmentLength--;
                 B_Up = false;
                 //Debug.Log("Move Down " + B_Up + "  " + G_hook.transform.position);
 
             }
-            if (B_Left)
-            {
-                //Debug.Log("Move Left");
-                G_hook.transform.Translate(Vector3.left * 5f * Time.deltaTime);
-                B_Left = false;
-            }
-            if (B_Right)
-            {
-                //Debug.Log("Move Right");
-                G_hook.transform.Translate(Vector3.right * 5f * Time.deltaTime);
-                B_Right = false;
-            }*/
+             if (B_Up)
+             {
+                 //Debug.Log("Move Up");
+                 G_hook.transform.Translate(Vector3.up * 10f * Time.deltaTime);
+                 // G_FishingRope.GetComponent<Rope_sim>().segmentLength--;
+                 B_Up = false;
+                 //Debug.Log("Move Down " + B_Up + "  " + G_hook.transform.position);
+
+             }
+             if (B_Left)
+             {
+                 //Debug.Log("Move Left");
+                 G_hook.transform.Translate(Vector3.left * 5f * Time.deltaTime);
+                 B_Left = false;
+             }
+             if (B_Right)
+             {
+                 //Debug.Log("Move Right");
+                 G_hook.transform.Translate(Vector3.right * 5f * Time.deltaTime);
+                 B_Right = false;
+             }*/
         }
 
        
@@ -301,9 +311,8 @@ public class Fish_sorting_main : MonoBehaviour
     public void THI_Catched()
     {
         B_CanCatched = false;
+        // Debug.Log("B_CanCatched " + B_CanCatched+ G_hook.transform.position);
         B_FishClicked = false;
-       // Debug.Log("B_CanCatched " + B_CanCatched+ G_hook.transform.position);
-        
         StopCoroutine(SpawnFish());
         B_Lerp = true;
         for (int i=0;i<STRA_AnsList.Length;i++)
@@ -316,16 +325,12 @@ public class Fish_sorting_main : MonoBehaviour
 
         Invoke(nameof(THI_LateClick), 2f);
 
-        Invoke(nameof(THI_ListClear), 3f);
         
         
        // Invoke("OffLerp", 2f);        
     }
     
-    void THI_ListClear()
-    {
-        G_ClickedFish.Clear();
-    }
+  
     void THI_LateClick()
     {
         Tap_Text.gameObject.SetActive(true);
@@ -410,6 +415,7 @@ public class Fish_sorting_main : MonoBehaviour
       // B_Fishspawn = true;
       //  StartCoroutine(SpawnFish());
         STR_currentSelectedAnswer = "";
+        G_ClickedFish = null;
     }
 
     public void THI_NextQuestion()
@@ -493,6 +499,7 @@ public class Fish_sorting_main : MonoBehaviour
     public void THI_Correct()
     {
         B_CanClick = false;
+        B_FishClicked = false;
         I_Points += I_correctPoints;
         TEX_points.text = I_Points.ToString();
         THI_pointFxOn(true);
@@ -564,8 +571,9 @@ public class Fish_sorting_main : MonoBehaviour
     }
     public void THI_Wrong()
     {
-       // Debug.Log("Wrong ans");
-       // B_CanCatched = true;
+        // Debug.Log("Wrong ans");
+        // B_CanCatched = true;
+        B_FishClicked = false;
         G_hook.GetComponent<Animator>().enabled = true;
         G_hook.GetComponent<Animator>().Play("Fish_Escaped");
         AS_Wrong.Play();
