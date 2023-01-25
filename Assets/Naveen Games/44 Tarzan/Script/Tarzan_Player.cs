@@ -6,12 +6,14 @@ public class Tarzan_Player : MonoBehaviour
 {
     Rigidbody2D rb;
     LineRenderer LR_Rope;
+    ParticleSystem PS_spawnedParticleSystem;
     public Camera Cam;
     public GameObject[] GA_Circles;
     public GameObject G_Catchthis;
     public DistanceJoint2D DJ2D;
     public float Range;
     public Vector3 pos,V3_StartPos;
+    public ParticleSystem PS_questionSpawnParticle;
 
     public AudioSource AS_Empty, AS_Jump;
     public AudioClip[] ACA_Clips;
@@ -76,10 +78,10 @@ public class Tarzan_Player : MonoBehaviour
         playerVelocity = rb.velocity;
         F_playerMagnitude = rb.velocity.magnitude;
 
-        if((rb.velocity.y < 0 || !B_landedOnMushroom) && B_appliedDragChild){
-            B_appliedDragChild = false;
-            rb.velocity = rb.velocity * F_dragForce;
-        }
+        // if((rb.velocity.y < 0 || !B_landedOnMushroom) && B_appliedDragChild){
+        //     B_appliedDragChild = false;
+        //     rb.velocity = rb.velocity * F_dragForce;
+        // }
 
         if(B_landedOnMushroom || (Input.GetButton("Horizontal") && !B_blockInput)){
         // if(B_landedOnMushroom){
@@ -144,9 +146,11 @@ public class Tarzan_Player : MonoBehaviour
             B_landedOnMushroom = true;
             B_appliedDragChild = true;
             if(collision.gameObject.GetComponent<Mushroom>().B_questionALlocated){
-                Tarzan_Main.Instance.THI_SpawnQuestion();
+                PS_spawnedParticleSystem = Instantiate(PS_questionSpawnParticle, gameObject.transform.position, Quaternion.identity);
 
-                Debug.Log("Game Object Name : "+collision.gameObject.transform.parent.gameObject.name+" Game Object Instance ID : "+collision.gameObject.transform.parent.GetInstanceID(), collision.gameObject.transform.parent.gameObject);
+                Tarzan_Main.Instance.Invoke("THI_SpawnQuestion", 0.5f);
+
+                // Debug.Log("Game Object Name : "+collision.gameObject.transform.parent.gameObject.name+" Game Object Instance ID : "+collision.gameObject.transform.parent.GetInstanceID(), collision.gameObject.transform.parent.gameObject);
 
                 Tarzan_Main.Instance.THI_DeAllocateQuestion(collision.gameObject.transform.parent.gameObject);
                 B_blockInput = true;

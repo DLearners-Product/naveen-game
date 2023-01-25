@@ -109,7 +109,7 @@ public class Tarzan_Main : MonoBehaviour
 
     public void THI_SpawnQuestion(){
         G_Question.SetActive(true);
-
+        G_Question.GetComponent<Animator>().Play("questionPanelExpand");
         switch (I_optionCount)
         {
             case 2:
@@ -799,9 +799,7 @@ public class Tarzan_Main : MonoBehaviour
         float percent;
         int questionCount = 0;
         while(questionCount < AD_questionAllocated.Length){
-            Debug.Log("in while loop...!!");
             for(int i=0; i < GA_mushrooms.Length; i++){
-                Debug.Log("In for loop..@@");
                 percent = Random.Range(1, 100);
                 if(percent >= F_quesAllocPer){
                     // Debug.Log(GA_mushrooms[i].gameObject.name, GA_mushrooms[i].gameObject);
@@ -824,7 +822,6 @@ public class Tarzan_Main : MonoBehaviour
                 }
             }
         }
-        Debug.Log("Loop exited...");
     }
 
     public void THI_DeAllocateQuestion(GameObject gameObjectInstanceID){
