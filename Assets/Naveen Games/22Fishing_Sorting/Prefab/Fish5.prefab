@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 525045156794201801}
   - component: {fileID: 525045156794201806}
   - component: {fileID: 525045156794201807}
-  - component: {fileID: 8521055841268623081}
+  - component: {fileID: 3632674499466676220}
   m_Layer: 0
   m_Name: Fish5
   m_TagString: Untagged
@@ -133,7 +133,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &525045156794201807
 BoxCollider2D:
@@ -148,7 +148,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 123.01575, y: 2.857067}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -159,9 +159,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16.81, y: 39.67}
+  m_Size: {x: 262.8415, y: 90.02889}
   m_EdgeRadius: 0
---- !u!114 &8521055841268623081
+--- !u!114 &3632674499466676220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,15 +219,15 @@ RectTransform:
   m_GameObject: {fileID: 525045156909359314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13727753, y: 0.13727753, z: 0.13727753}
+  m_LocalScale: {x: 0.14818628, y: 0.14818628, z: 0.14818628}
   m_Children: []
   m_Father: {fileID: 525045156794201811}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.513306, y: -3.6819}
-  m_SizeDelta: {x: 983.3875, y: 326.4066}
+  m_AnchoredPosition: {x: -17.7587, y: -0.586}
+  m_SizeDelta: {x: 1175.5962, y: 568.7568}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &525045156909359311
 CanvasRenderer:
@@ -414,6 +414,18 @@ MonoBehaviour:
       - m_Target: {fileID: 4310331363718254033}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 525045156794201801}
+        m_TargetAssemblyTypeName: FS_Fish, Assembly-CSharp
+        m_MethodName: FishClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
