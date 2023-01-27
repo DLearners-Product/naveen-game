@@ -198,20 +198,19 @@ public class Tarzan_Main : MonoBehaviour
             }
         }
         // STR_currentSelectedAnswer = G_Question.transform.GetChild(0).transform.GetChild(1).GetComponent<TMP_InputField>().text;
-        if(I_currentQuestionCount<STRL_questions.Count-1)
+        if(I_currentQuestionCount <= STRL_questions.Count-1)
         {
             float animatClipLength = 0f;
 
             foreach(var animation in G_Question.GetComponent<Animator>().runtimeAnimatorController.animationClips){
                 Debug.Log("Animation Name : "+animation.name);
-                if(animation.name == "questionPanelExpand"){
+                if(animation.name == "questionPanelSrink"){
                     animatClipLength = animation.length;
                     break;
                 }
             }
             Debug.Log("animation Clip length : "+animatClipLength);
-            G_Question.GetComponent<Animator>().SetFloat("Direction", -1f);
-            G_Question.GetComponent<Animator>().Play("questionPanelExpand", -1, float.NegativeInfinity);
+            G_Question.GetComponent<Animator>().Play("questionPanelSrink");
 
             Invoke(nameof(THI_DisableQuestion), animatClipLength + 0.5f);
         }
@@ -825,10 +824,12 @@ public class Tarzan_Main : MonoBehaviour
                     AD_questionAllocated[questionCount].selectedMushroom = GA_mushrooms[i].gameObject;
 
                     for(int j=0; j < GA_mushrooms[i].gameObject.transform.childCount; j++){
-                        // Debug.Log("Mushroom Name : "+GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.name, GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject);
+                        if(GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>()){
+                            Debug.Log("Mushroom Name : "+GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.name, GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject);
 
-                        AD_questionAllocated[questionCount].mushrooms.Add(GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>());
-                        GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>().B_questionALlocated = true;
+                            AD_questionAllocated[questionCount].mushrooms.Add(GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>());
+                            GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>().B_questionALlocated = true;
+                        }
                     }
                     AD_questionAllocated[questionCount].I_questionID = questionCount;
                     questionCount++;
@@ -861,7 +862,6 @@ public class AllocatedQuestions{
     public GameObject selectedMushroom;
     public List<Mushroom> mushrooms;
     public AllocatedQuestions(){
-        Debug.Log("Object instantiated");
         mushrooms = new List<Mushroom>();
     }
 }

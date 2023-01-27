@@ -67,8 +67,8 @@ public class MainController : MonoBehaviour
         //  Debug.Log("WEB");
 #endif
 
-        MOBILE = false;
-        WEB = true;
+        // MOBILE = false;
+        // WEB = true;
         //if (MOBILE)
         //{
         //    STR_GameID = GameManager.instance.STR_selectedGameID;
@@ -82,11 +82,11 @@ public class MainController : MonoBehaviour
 
 
             // testing
-             STR_childID = "336";
-              mode = "live";
+            //  STR_childID = "336";
+            //   mode = "live";
 
             // Live ID's
-             STR_GameID = "525";
+            //  STR_GameID = "525";
             //  STR_GameID = "619"; //fish sorting
             //  STR_GameID = "404"; //fruit ninja
             //  STR_GameID = "322"; //Domino arrange

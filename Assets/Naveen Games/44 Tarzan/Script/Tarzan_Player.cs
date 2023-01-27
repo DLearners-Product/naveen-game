@@ -107,8 +107,13 @@ public class Tarzan_Player : MonoBehaviour
     }
     
     void PlayerAnimation(){
-        Vector2 playerFacingDirection = rb.velocity.normalized;
-
+        if(!B_blockInput && !Input.GetButton("Horizontal")) { return; }
+        // Debug.Log("Axis : "+Input.GetAxis("Horizontal"));
+        transform.localScale = new Vector3(
+            ((Input.GetAxis("Horizontal") > 0) ? 1 : -1) * Mathf.Abs(transform.localScale.x),
+            transform.localScale.y,
+            transform.localScale.z
+        );
         // transform.forward = new Vector2(
         //     playerFacingDirection.x,
         //     0f
@@ -145,6 +150,7 @@ public class Tarzan_Player : MonoBehaviour
         if(collision.gameObject.GetComponent<Mushroom>()){
             B_landedOnMushroom = true;
             B_appliedDragChild = true;
+            V3_StartPos = (collision.gameObject.GetComponent<Mushroom>().spawnPosition) ? collision.gameObject.GetComponent<Mushroom>().spawnPosition.position : V3_StartPos;
             if(collision.gameObject.GetComponent<Mushroom>().B_questionALlocated){
                 PS_spawnedParticleSystem = Instantiate(PS_questionSpawnParticle, gameObject.transform.position, Quaternion.identity);
 
