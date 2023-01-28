@@ -49,6 +49,9 @@ public class FS_Fish : MonoBehaviour
         if(collision.gameObject.name== "DestroyFish")
         {
             Destroy(this.gameObject);
+            Fish_sorting_main.Instance.B_FishClicked = false;
+            Fish_sorting_main.Instance.G_ClickedFish = null;
+
         }
     }
 }
