@@ -402,8 +402,10 @@ public class Fish_sorting_main : MonoBehaviour
             G_Bear.GetComponent<Animator>().Play("Catchout");
         }
 
+        
+
        
-        Invoke(nameof(Offanim), 4f);
+        Invoke(nameof(Offanim), 2f);
     }
     void Offanim()
     {
