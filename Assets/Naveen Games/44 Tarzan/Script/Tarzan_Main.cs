@@ -733,13 +733,17 @@ public class Tarzan_Main : MonoBehaviour
         json.Temp_type_2(MainController.instance.STR_previewJsonAPI, STRL_difficulty, IL_numbers, STRL_questions, STRL_answers, STRL_options, STRL_questionID, STRL_instruction, STRL_quesitonAudios, STRL_optionAudios,
             STRL_instructionAudio, STRL_cover_img_link, STRL_Passagedetails);
 
+        I_optionCount = IL_numbers[3];
+
         STR_difficulty = STRL_difficulty[0];
         STR_instruction = STRL_instruction[0];
         MainController.instance.I_correctPoints = I_correctPoints = IL_numbers[1];
         I_wrongPoints = IL_numbers[2];
         MainController.instance.I_TotalQuestions = STRL_questions.Count;
 
-       
+        AD_questionAllocated = new AllocatedQuestions[IL_numbers[0]];
+        THI_AllocateQuestion();
+
         StartCoroutine(EN_getAudioClips());
         StartCoroutine(IN_CoverImage());
         StartCoroutine(IMG_Question());
