@@ -33,7 +33,7 @@ public class FS_Fish : MonoBehaviour
         {
             
             
-                if (Fish_sorting_main.Instance.B_CanCatched)
+                if (Fish_sorting_main.Instance.B_CanCatched && Fish_sorting_main.Instance.B_FishClicked == true)
                 {
                     B_CanMove = false;
                     // Debug.Log("this == " + this.transform.GetChild(0).GetComponent<Text>().text);

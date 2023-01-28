@@ -149,7 +149,7 @@ public class Fish_sorting_main : MonoBehaviour
         STRL_questions = new List<string>();
         STRL_answers = new List<string>();
         STRL_options = new List<string>();
-        Invoke("THI_gameData", 1f);
+        Invoke("THI_gameData", 0f);
 
         I_currentQuestionCount = -1;
         I_Dummmy = 0;
@@ -193,7 +193,7 @@ public class Fish_sorting_main : MonoBehaviour
 
         if (B_Fishspawn && B_CanCatched)
         {
-            if (B_FishClicked)
+            if (B_FishClicked && G_ClickedFish != null )
             {
                  
     
@@ -263,6 +263,7 @@ public class Fish_sorting_main : MonoBehaviour
 
         if (B_Lerp)
         {
+            
             G_hook.transform.position = Vector3.Lerp(G_hook.transform.position, G_Lerppos.transform.position, 0.01f);
             // G_hook.transform.GetChild(0).transform.rotation;
         }
@@ -405,7 +406,7 @@ public class Fish_sorting_main : MonoBehaviour
         
 
        
-        Invoke(nameof(Offanim), 2f);
+        Invoke(nameof(Offanim), 3f);
     }
     void Offanim()
     {
