@@ -24,33 +24,35 @@ public class FS_Fish : MonoBehaviour
     public void FishClicked()
     {
         Debug.Log("FishClicked");
-        Fish_sorting_main.Instance.B_FishClicked = true;
-        Fish_sorting_main.Instance.G_ClickedFish = this.gameObject;
+        Fish_sorting_main.Instance.G_ClickedFish = gameObject;
+        // Fish_sorting_main.Instance.B_FishClicked = true;
+        // StartCoroutine(Fish_sorting_main.Instance.THI_CatchFish());
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name== "Rope_end" && Fish_sorting_main.Instance.B_FishClicked == true)
+        if(collision.gameObject.name == "Rope_end"){
+            Debug.Log($"Other : "+collision.gameObject.name+" Game Object : "+gameObject.name+"\n B_cancatched : "+Fish_sorting_main.Instance.B_CanCatched+" B_FishClicked : "+Fish_sorting_main.Instance.B_FishClicked, gameObject);
+        }
+
+        if(collision.gameObject.name== "Rope_end" && Fish_sorting_main.Instance.G_ClickedFish != null)
         {
-            
-            
-                if (Fish_sorting_main.Instance.B_CanCatched && Fish_sorting_main.Instance.B_FishClicked == true)
-                {
-                    B_CanMove = false;
-                    // Debug.Log("this == " + this.transform.GetChild(0).GetComponent<Text>().text);
-                    Fish_sorting_main.Instance.STR_currentSelectedAnswer = this.transform.GetChild(0).GetComponent<Text>().text;
-                    Fish_sorting_main.Instance.THI_Catched();
-                    this.transform.GetChild(0).GetComponent<AudioSource>().Play();
-                    this.transform.SetParent(Fish_sorting_main.Instance.G_hook.transform.GetChild(0).transform, false);
-                    this.transform.position = Fish_sorting_main.Instance.G_hook.transform.GetChild(0).transform.position;
-                }
-            
+            if (Fish_sorting_main.Instance.B_CanCatched)
+            {
+                B_CanMove = false;
+                // Debug.Log("this == " + this.transform.GetChild(0).GetComponent<Text>().text);
+                Fish_sorting_main.Instance.STR_currentSelectedAnswer = this.transform.GetChild(0).GetComponent<Text>().text;
+                Fish_sorting_main.Instance.THI_Catched();
+                this.transform.GetChild(0).GetComponent<AudioSource>().Play();
+                this.transform.SetParent(Fish_sorting_main.Instance.G_hook.transform.GetChild(0).transform, false);
+                this.transform.position = Fish_sorting_main.Instance.G_hook.transform.GetChild(0).transform.position;
+            }
             
         }
         if(collision.gameObject.name== "DestroyFish")
         {
             Destroy(this.gameObject);
-            Fish_sorting_main.Instance.B_FishClicked = false;
-            Fish_sorting_main.Instance.G_ClickedFish = null;
+            // Fish_sorting_main.Instance.B_FishClicked = false;
+            // Fish_sorting_main.Instance.G_ClickedFish = null;
 
         }
     }

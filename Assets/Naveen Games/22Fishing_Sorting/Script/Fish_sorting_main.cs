@@ -193,18 +193,6 @@ public class Fish_sorting_main : MonoBehaviour
 
         if (B_Fishspawn && B_CanCatched)
         {
-            if (B_FishClicked && G_ClickedFish != null )
-            {
-                 
-    
-              G_hook.transform.position = Vector3.MoveTowards(G_hook.transform.position, G_ClickedFish.transform.position, 10 * Time.deltaTime);
-                
-                //Debug.Log("Move Down");
-               
-                // G_FishingRope.GetComponent<Rope_sim>().segmentLength++;
-                //B_Down = false;
-                //Debug.Log("Move Down "+ B_Down + "  "+G_hook.transform.position);
-            }
          
             /*
             if (B_Down)
@@ -275,6 +263,28 @@ public class Fish_sorting_main : MonoBehaviour
                 OffLerp();
                 B_CanClick = false;
             }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        THI_CatchFish();
+    }
+
+    public void THI_CatchFish(){
+        bool fishCatchCheck = (B_FishClicked && G_ClickedFish != null && B_Fishspawn && B_CanCatched);
+
+        if(G_ClickedFish == null)
+            B_FishClicked = false;
+
+        if(fishCatchCheck && (Vector3.Distance(transform.position, G_ClickedFish.transform.position) > 1f))
+        {
+            Debug.Log($"Going towards fish : "+G_ClickedFish.name, G_ClickedFish);
+            G_hook.transform.position = Vector3.MoveTowards(G_hook.transform.position, G_ClickedFish.transform.position, 10 * Time.deltaTime);
+            // yield return new WaitForSeconds(0.1f);
+            // G_FishingRope.GetComponent<Rope_sim>().segmentLength++;
+            //B_Down = false;
+            //Debug.Log("Move Down "+ B_Down + "  "+G_hook.transform.position);
         }
     }
 
@@ -502,7 +512,7 @@ public class Fish_sorting_main : MonoBehaviour
     public void THI_Correct()
     {
         B_CanClick = false;
-        B_FishClicked = false;
+        // B_FishClicked = false;
         I_Points += I_correctPoints;
         TEX_points.text = I_Points.ToString();
         THI_pointFxOn(true);
@@ -576,7 +586,7 @@ public class Fish_sorting_main : MonoBehaviour
     {
         // Debug.Log("Wrong ans");
         // B_CanCatched = true;
-        B_FishClicked = false;
+        // B_FishClicked = false;
         G_hook.GetComponent<Animator>().enabled = true;
         G_hook.GetComponent<Animator>().Play("Fish_Escaped");
         AS_Wrong.Play();
