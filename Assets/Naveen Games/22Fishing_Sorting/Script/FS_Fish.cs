@@ -29,11 +29,11 @@ public class FS_Fish : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name== "Rope_end" && Fish_sorting_main.Instance.B_FishClicked == true)
+        if(collision.gameObject.name == "Rope_end" && Fish_sorting_main.Instance.B_FishClicked == true)
         {
             
             
-                if (Fish_sorting_main.Instance.B_CanCatched && Fish_sorting_main.Instance.B_FishClicked == true)
+                if (Fish_sorting_main.Instance.B_CanCatched && B_CanMove)
                 {
                     B_CanMove = false;
                     // Debug.Log("this == " + this.transform.GetChild(0).GetComponent<Text>().text);

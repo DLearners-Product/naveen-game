@@ -40393,11 +40393,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 3.62
       objectReference: {fileID: 0}
+    - target: {fileID: 8767668101199823057, guid: c528fda388ddc874ab53db88ba54d7ed,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1007
+      objectReference: {fileID: 0}
     - target: {fileID: 8767668101341777491, guid: c528fda388ddc874ab53db88ba54d7ed,
         type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 11da846d6f6f55444860f5a863043b5d, type: 3}
+    - target: {fileID: 8767668101395569685, guid: c528fda388ddc874ab53db88ba54d7ed,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8767668101395569689, guid: c528fda388ddc874ab53db88ba54d7ed,
         type: 3}
       propertyPath: m_Constraints
@@ -40411,7 +40421,7 @@ PrefabInstance:
     - target: {fileID: 8767668101521128334, guid: c528fda388ddc874ab53db88ba54d7ed,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8767668101562186896, guid: c528fda388ddc874ab53db88ba54d7ed,
         type: 3}

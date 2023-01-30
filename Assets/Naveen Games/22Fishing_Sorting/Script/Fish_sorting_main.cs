@@ -39,7 +39,6 @@ public class Fish_sorting_main : MonoBehaviour
     public GameObject G_Question;
     public GameObject G_hook;
     public GameObject G_BGlayer;
-    public GameObject G_BGlayerHz;
     public GameObject G_Bucket;
     public GameObject G_Lerppos;
     public GameObject G_FishingRope;
@@ -193,9 +192,8 @@ public class Fish_sorting_main : MonoBehaviour
 
         if (B_Fishspawn && B_CanCatched)
         {
-            if (B_FishClicked && G_ClickedFish != null )
+            if (B_FishClicked == true && G_ClickedFish != null )
             {
-                 
     
               G_hook.transform.position = Vector3.MoveTowards(G_hook.transform.position, G_ClickedFish.transform.position, 10 * Time.deltaTime);
                 
@@ -403,9 +401,9 @@ public class Fish_sorting_main : MonoBehaviour
             G_Bear.GetComponent<Animator>().Play("Catchout");
         }
 
-        
 
-       
+
+        G_ClickedFish = null;
         Invoke(nameof(Offanim), 3f);
     }
     void Offanim()
@@ -418,7 +416,7 @@ public class Fish_sorting_main : MonoBehaviour
       // B_Fishspawn = true;
       //  StartCoroutine(SpawnFish());
         STR_currentSelectedAnswer = "";
-        G_ClickedFish = null;
+       
     }
 
     public void THI_NextQuestion()
@@ -502,7 +500,6 @@ public class Fish_sorting_main : MonoBehaviour
     public void THI_Correct()
     {
         B_CanClick = false;
-        B_FishClicked = false;
         I_Points += I_correctPoints;
         TEX_points.text = I_Points.ToString();
         THI_pointFxOn(true);
@@ -576,7 +573,6 @@ public class Fish_sorting_main : MonoBehaviour
     {
         // Debug.Log("Wrong ans");
         // B_CanCatched = true;
-        B_FishClicked = false;
         G_hook.GetComponent<Animator>().enabled = true;
         G_hook.GetComponent<Animator>().Play("Fish_Escaped");
         AS_Wrong.Play();
