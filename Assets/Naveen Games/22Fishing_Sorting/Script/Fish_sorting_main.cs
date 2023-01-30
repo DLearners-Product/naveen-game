@@ -272,7 +272,7 @@ public class Fish_sorting_main : MonoBehaviour
     }
 
     public void THI_CatchFish(){
-        bool fishCatchCheck = (B_FishClicked && G_ClickedFish != null && B_Fishspawn && B_CanCatched);
+        bool fishCatchCheck = (G_ClickedFish != null && B_Fishspawn && B_CanCatched);
 
         if(G_ClickedFish == null)
             B_FishClicked = false;
