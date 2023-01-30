@@ -7,9 +7,11 @@ public class FS_Fish : MonoBehaviour
 {
     bool B_CanMove;
     public float speed = 1f;
+    public int fishID;
     private void Start()
     {
         B_CanMove = true;
+        fishID = Random.Range(100, 999);
     }
     private void Update()
     {
@@ -28,32 +30,32 @@ public class FS_Fish : MonoBehaviour
         // Fish_sorting_main.Instance.B_FishClicked = true;
         // StartCoroutine(Fish_sorting_main.Instance.THI_CatchFish());
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.name == "Rope_end"){
-            Debug.Log($"Other : "+collision.gameObject.name+" Game Object : "+gameObject.name+"\n B_cancatched : "+Fish_sorting_main.Instance.B_CanCatched+" B_FishClicked : "+Fish_sorting_main.Instance.B_FishClicked, gameObject);
+            Debug.Log(fishID+" Other : "+collision.gameObject.name+" Game Object : "+gameObject.name+"\n B_cancatched : "+Fish_sorting_main.Instance.B_CanCatched+" B_FishClicked : "+Fish_sorting_main.Instance.B_FishClicked, gameObject);
         }
 
-        if(collision.gameObject.name == "Rope_end" && Fish_sorting_main.Instance.G_ClickedFish != null)
+        if(collision.gameObject.name == "Rope_end" && Fish_sorting_main.Instance.G_ClickedFish != null && B_CanMove)
         {
-            Debug.Log("Came to 1st if statement", gameObject);
+            Debug.Log(fishID+"Came to 1st if statement", gameObject);
 
             if (Fish_sorting_main.Instance.B_CanCatched)
             {
-                Debug.Log("Came to 2nd if statement", gameObject);
+                Debug.Log(fishID+" Came to 2nd if statement", gameObject);
                 B_CanMove = false;
-                // Debug.Log("this == " + this.transform.GetChild(0).GetComponent<Text>().text);
+                // Debug.Log(fishID+" this == " + this.transform.GetChild(0).GetComponent<Text>().text);
                 Fish_sorting_main.Instance.STR_currentSelectedAnswer = this.transform.GetChild(0).GetComponent<Text>().text;
                 Fish_sorting_main.Instance.THI_Catched();
                 this.transform.GetChild(0).GetComponent<AudioSource>().Play();
                 this.transform.SetParent(Fish_sorting_main.Instance.G_hook.transform.GetChild(0).transform, false);
                 this.transform.position = Fish_sorting_main.Instance.G_hook.transform.GetChild(0).transform.position;
             }else{
-                Debug.Log("Came to 2nd else statement : "+Fish_sorting_main.Instance.B_CanCatched, gameObject);
+                Debug.Log(fishID+" Came to 2nd else statement : "+Fish_sorting_main.Instance.B_CanCatched, gameObject);
             }
             
         }else{
-            Debug.Log("Came to 1st else statement => \n GO Name : "+collision.gameObject.name+"\n Clicked Fish : "+((Fish_sorting_main.Instance.G_ClickedFish != null) ? Fish_sorting_main.Instance.G_ClickedFish.name : "NULL"), gameObject);
+            Debug.Log(fishID+" Came to 1st else statement => \n GO Name : "+collision.gameObject.name+"\n Clicked Fish : "+((Fish_sorting_main.Instance.G_ClickedFish != null) ? Fish_sorting_main.Instance.G_ClickedFish.name : "NULL"), gameObject);
         }
         if(collision.gameObject.name== "DestroyFish")
         {
