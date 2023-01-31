@@ -191,10 +191,10 @@ public class Fish_sorting_main : MonoBehaviour
             DemoOver();
         }
 
-        if (B_Fishspawn && B_CanCatched)
+      /*  if (B_Fishspawn && B_CanCatched)
         {
          
-            /*
+            *//*
             if (B_Down)
             {
                 //Debug.Log("Move Up");
@@ -224,8 +224,8 @@ public class Fish_sorting_main : MonoBehaviour
                  //Debug.Log("Move Right");
                  G_hook.transform.Translate(Vector3.right * 5f * Time.deltaTime);
                  B_Right = false;
-             }*/
-        }
+             }*//*
+        }*/
 
        
           /*  if(Input.GetKey(KeyCode.UpArrow))
@@ -279,7 +279,6 @@ public class Fish_sorting_main : MonoBehaviour
 
         if(fishCatchCheck && (Vector3.Distance(transform.position, G_ClickedFish.transform.position) > 1f))
         {
-            Debug.Log($"Going towards fish : "+G_ClickedFish.name, G_ClickedFish);
             G_hook.transform.position = Vector3.MoveTowards(G_hook.transform.position, G_ClickedFish.transform.position, 10 * Time.deltaTime);
             // yield return new WaitForSeconds(0.1f);
             // G_FishingRope.GetComponent<Rope_sim>().segmentLength++;
