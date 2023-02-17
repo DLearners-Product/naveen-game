@@ -562,6 +562,7 @@ public class Tarzan_Main : MonoBehaviour
             StartCoroutine(IN_CoverImage());
             StartCoroutine(IMG_Question());
             StartCoroutine(IMG_Option());
+            TEX_questionCount.text = (I_currentQuestionCount + 1) + "/" + STRL_questions.Count;
         }
     }
 
@@ -748,6 +749,7 @@ public class Tarzan_Main : MonoBehaviour
         StartCoroutine(IN_CoverImage());
         StartCoroutine(IMG_Question());
         StartCoroutine(IMG_Option());
+        TEX_questionCount.text = (I_currentQuestionCount + 1) + "/" + STRL_questions.Count;
 
         // THI_createOptions();
     }
