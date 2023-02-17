@@ -83,10 +83,10 @@ public class MainController : MonoBehaviour
 
             // testing
             //  STR_childID = "336";
-            //   mode = "live";
+            //   mode = "preview";
 
             // Live ID's
-            //  STR_GameID = "525";
+            //  STR_GameID = "837";
             //  STR_GameID = "619"; //fish sorting
             //  STR_GameID = "404"; //fruit ninja
             //  STR_GameID = "322"; //Domino arrange
