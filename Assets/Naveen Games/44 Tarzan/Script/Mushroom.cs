@@ -6,10 +6,12 @@ public class Mushroom : MonoBehaviour
 {
     Animator Anim;
     bool B_CallOnce;
+    public bool B_questionALlocated;
+    public Transform spawnPosition;
     // Start is called before the first frame update
     void Start()
     {
-        
+        B_questionALlocated = false;
         Anim = this.GetComponent<Animator>();
         OffAnim();
     }
@@ -26,8 +28,8 @@ public class Mushroom : MonoBehaviour
             Anim.Play("effect");
             Invoke(nameof(OffAnim), 2f);
         }
-       
     }
+
     void OffAnim()
     {
        // Debug.Log("BOol Calling Off");

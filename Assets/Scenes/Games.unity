@@ -26794,6 +26794,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b8be129da196de48b22b3a84ccf8492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  F_quesAllocPer: 0
+  GA_mushrooms: []
+  AD_questionAllocated: []
+  G_questionImage: {fileID: 0}
+  G_optionImagePanel: {fileID: 0}
+  G_2OptionPanel: {fileID: 0}
+  G_3optionPanel: {fileID: 0}
+  G_4OptionPanel: {fileID: 0}
   B_production: 0
   G_Demo: {fileID: 1126236550}
   G_CurrentLevel: {fileID: 0}
@@ -26812,6 +26820,7 @@ MonoBehaviour:
   STR_currentQuestionAnswer: 
   STR_currentSelectedAnswer: 
   I_currentQuestionCount: 0
+  I_currentOptionStartingCount: 0
   STR_currentQuestionID: 
   I_Points: 0
   I_wrongAnsCount: 0
@@ -26838,6 +26847,7 @@ MonoBehaviour:
   STRL_quesitonAudios: []
   STRL_optionAudios: []
   STRL_instructionAudio: []
+  SPRA_Options: []
   STRL_questionID: []
   STR_customizationKey: 
   STRL_BG_img_link: []
@@ -36896,7 +36906,7 @@ PrefabInstance:
     - target: {fileID: 776048730628194771, guid: 26fb2e92636030a498aad4a8895ddd8a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 776048730628194771, guid: 26fb2e92636030a498aad4a8895ddd8a,
         type: 3}
@@ -37410,7 +37420,7 @@ PrefabInstance:
     - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
         type: 3}
@@ -37466,6 +37476,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tarzan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026323354185937190, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c0824cc9b4d8eb42af420e449afe2d2, type: 3}
@@ -37703,6 +37718,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4601797003226549750, guid: cf77a886b1e40604b86b07a889c9b368,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3486fbc1f80cc974294c98dc1ed2d10b, type: 3}
+    - target: {fileID: 4601797003226549751, guid: cf77a886b1e40604b86b07a889c9b368,
+        type: 3}
+      propertyPath: m_text
+      value: Use the joystick to move the supply boxes using the crane
+      objectReference: {fileID: 0}
     - target: {fileID: 4601797003387110258, guid: cf77a886b1e40604b86b07a889c9b368,
         type: 3}
       propertyPath: m_RootOrder

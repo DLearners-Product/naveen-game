@@ -11,6 +11,14 @@ using System.Threading.Tasks;
 public class Tarzan_Main : MonoBehaviour
 {
     public static Tarzan_Main Instance;
+    public float F_quesAllocPer;
+    public GameObject[] GA_mushrooms;
+    public AllocatedQuestions[] AD_questionAllocated;
+    public GameObject G_questionImage, G_optionImagePanel;
+    public GameObject G_2OptionPanel,
+                    G_3optionPanel,
+                    G_4OptionPanel;
+    private GameObject[] G_selectedOption;
     public bool B_production;
 
     [Header("Screens and UI elements")]
@@ -41,6 +49,7 @@ public class Tarzan_Main : MonoBehaviour
     public string STR_currentQuestionAnswer;
     public string STR_currentSelectedAnswer;
     public int I_currentQuestionCount; // question number current
+    public int I_currentOptionStartingCount;
     public string STR_currentQuestionID;
     public int I_Points;
     public int I_wrongAnsCount;
@@ -60,6 +69,7 @@ public class Tarzan_Main : MonoBehaviour
     public AudioSource AS_LevelOver;
 
     [Header("DB")]
+    int I_optionCount;
     public List<string> STRL_difficulty;
     public string STR_difficulty;
     public List<int> IL_numbers;
@@ -74,6 +84,7 @@ public class Tarzan_Main : MonoBehaviour
     public List<string> STRL_quesitonAudios;
     public List<string> STRL_optionAudios;
     public List<string> STRL_instructionAudio;
+    public Sprite[] SPRA_Options;
     public List<string> STRL_questionID;
     public string STR_customizationKey;
     //Dummy values only for helicopter game
@@ -93,8 +104,35 @@ public class Tarzan_Main : MonoBehaviour
     public AudioClip[] ACA__questionClips;
     public AudioClip[] ACA_optionClips;
     public AudioClip[] ACA_instructionClips;
-    // Start is called before the first frame update
-    // Start is called before the first frame update
+
+#region APP_FUNCTIONALITY
+
+    public void THI_SpawnQuestion(){
+        G_Question.SetActive(true);
+
+        G_Question.GetComponent<Animator>().SetFloat("Direction", 1);
+        G_Question.GetComponent<Animator>().Play("questionPanelExpand");
+
+        switch (I_optionCount)
+        {
+            case 2:
+                G_optionImagePanel = G_2OptionPanel;
+                break;
+            case 3:
+                G_optionImagePanel = G_3optionPanel;
+                break;
+            case 4:
+                G_optionImagePanel = G_4OptionPanel;
+                break;
+        }
+
+        G_optionImagePanel.SetActive(true);
+
+        THI_NextQuestion();
+    }
+
+#endregion
+
     private void Awake()
     {
         Instance = this;
@@ -115,6 +153,7 @@ public class Tarzan_Main : MonoBehaviour
         }
 
     }
+
     void Start()
     {
         B_CloseDemo = true;
@@ -134,9 +173,11 @@ public class Tarzan_Main : MonoBehaviour
         Invoke("THI_gameData", 1f);
 
         I_currentQuestionCount = -1;
+        I_currentOptionStartingCount = 0;
         I_Dummmy = 0;
         I_Counter = 0;
     }
+
     private void Update()
     {
         if (!G_Demo.activeInHierarchy && B_CloseDemo)
@@ -144,24 +185,45 @@ public class Tarzan_Main : MonoBehaviour
             B_CloseDemo = false;
             DemoOver();
         }
-
     }
 
     public void BUT_Submit()
     {
-        STR_currentSelectedAnswer = G_Question.transform.GetChild(0).transform.GetChild(1).GetComponent<TMP_InputField>().text;
-        THI_TrackGameData("");
-        if(I_currentQuestionCount<STRL_questions.Count-1)
-        {
-            G_Question.SetActive(false);
-            THI_CloneLevel();
-            G_Player.GetComponent<Tarzan_Player>().THI_StartPos();
+        foreach(var toggle in G_optionImagePanel.GetComponent<ToggleGroup>().ActiveToggles()){
+            STR_currentSelectedAnswer = toggle.gameObject.name;
+            if(toggle.gameObject.name == STRL_answers[I_currentQuestionCount]){
+                THI_TrackGameData("1");
+            }else{
+                THI_TrackGameData("0");
+            }
         }
-        else
+        // STR_currentSelectedAnswer = G_Question.transform.GetChild(0).transform.GetChild(1).GetComponent<TMP_InputField>().text;
+        if(I_currentQuestionCount <= STRL_questions.Count-1)
         {
-            THI_Levelcompleted();
+            float animatClipLength = 0f;
+
+            foreach(var animation in G_Question.GetComponent<Animator>().runtimeAnimatorController.animationClips){
+                Debug.Log("Animation Name : "+animation.name);
+                if(animation.name == "questionPanelSrink"){
+                    animatClipLength = animation.length;
+                    break;
+                }
+            }
+            Debug.Log("animation Clip length : "+animatClipLength);
+            G_Question.GetComponent<Animator>().Play("questionPanelSrink");
+
+            Invoke(nameof(THI_DisableQuestion), animatClipLength + 0.5f);
         }
+        // else
+        // {
+        //     THI_Levelcompleted();
+        // }
         
+    }
+
+    void THI_DisableQuestion(){
+        G_Question.SetActive(false);
+        G_Player.GetComponent<Tarzan_Player>().B_blockInput = false;
     }
 
     void THI_gameData()
@@ -255,20 +317,29 @@ public class Tarzan_Main : MonoBehaviour
     public void THI_NextQuestion()
     {
 
-        G_Transition.SetActive(false);
-        if (I_currentQuestionCount < STRL_questions.Count - 1)
+        // G_Transition.SetActive(false);
+        if (I_currentQuestionCount <= STRL_questions.Count)
         {
             I_currentQuestionCount++;
-
 
             STRA_AnsList = null;
             STR_currentQuestionID = STRL_questionID[I_currentQuestionCount];
             int currentquesCount = I_currentQuestionCount + 1;
             TEX_questionCount.text = currentquesCount + "/" + STRL_questions.Count;
             STR_currentQuestionAnswer = STRL_answers[I_currentQuestionCount];
-            G_Question.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = STRL_questions[I_currentQuestionCount];
-            G_Question.transform.GetChild(0).transform.GetChild(0).GetComponent<AudioSource>().clip = ACA__questionClips[I_currentQuestionCount];
-            G_Question.transform.GetChild(0).transform.GetChild(1).GetComponent<TMP_InputField>().text = "";
+
+            G_questionImage.GetComponent<Image>().sprite = SPRA_Questions[I_currentQuestionCount];
+            for(int i=0; i < G_optionImagePanel.transform.childCount; i++, I_currentOptionStartingCount++){
+
+                G_optionImagePanel.transform.GetChild(i).gameObject.transform.GetChild(0).GetComponent<Image>().sprite = SPRA_Options[I_currentOptionStartingCount];
+                G_optionImagePanel.transform.GetChild(i).gameObject.name = SPRA_Options[I_currentOptionStartingCount].name;
+
+            }
+
+            // G_Question.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = STRL_questions[I_currentQuestionCount];
+            // G_Question.transform.GetChild(0).transform.GetChild(0).GetComponent<AudioSource>().clip = ACA__questionClips[I_currentQuestionCount];
+            // G_Question.transform.GetChild(0).transform.GetChild(1).GetComponent<TMP_InputField>().text = "";
+
             // G_Question.transform.GetChild(0).transform.GetChild(0).GetComponent<Image>().sprite = SPRA_Questions[I_currentQuestionCount];
             // G_Question.transform.GetChild(0).transform.GetChild(0).GetComponent<Image>().preserveAspect = true;
             //  G_Question.transform.GetChild(0).transform.GetChild(0).GetComponent<AudioSource>().clip = ACA__questionClips[I_currentQuestionCount];
@@ -289,7 +360,7 @@ public class Tarzan_Main : MonoBehaviour
 
 
 
-    void THI_Levelcompleted()
+    public void THI_Levelcompleted()
     {
         MainController.instance.I_TotalPoints = I_Points;
         G_levelComplete.SetActive(true);
@@ -477,21 +548,54 @@ public class Tarzan_Main : MonoBehaviour
 
             STR_difficulty = STRL_difficulty[0];
 
+            I_optionCount = IL_numbers[3];
+
             STR_instruction = STRL_instruction[0];
             MainController.instance.I_correctPoints = I_correctPoints = IL_numbers[1];
             I_wrongPoints = IL_numbers[2];
             MainController.instance.I_TotalQuestions = STRL_questions.Count;
 
-
+            AD_questionAllocated = new AllocatedQuestions[IL_numbers[0]];
+            THI_AllocateQuestion();
 
             StartCoroutine(EN_getAudioClips());
             StartCoroutine(IN_CoverImage());
-            StartCoroutine(IMG_Options());
-
+            StartCoroutine(IMG_Question());
+            StartCoroutine(IMG_Option());
+            TEX_questionCount.text = (I_currentQuestionCount + 1) + "/" + STRL_questions.Count;
         }
     }
 
-    public IEnumerator IMG_Options()
+    IEnumerator IMG_Option()
+    {
+
+        SPRA_Options = new Sprite[STRL_options.Count];
+        // yield return new WaitForSeconds(0.01f);
+        //  Q_Img();
+
+        for (int i = 0; i < STRL_options.Count; i++)
+        {
+            UnityWebRequest www = UnityWebRequestTexture.GetTexture(STRL_options[i]);
+            yield return www.SendWebRequest();
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Texture2D downloadedTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+
+                SPRA_Options[i] = Sprite.Create(downloadedTexture, new Rect(0.0f, 0.0f, downloadedTexture.width, downloadedTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
+
+                string[] Names = (STRL_options[i].Split('/'));
+                string[] Finalname = (Names[Names.Length - 1].Split('.'));
+
+                SPRA_Options[i].name = Finalname[0];
+            }
+        }
+    }
+
+    IEnumerator IMG_Question()
     {
 
         SPRA_Questions = new Sprite[STRL_questions.Count];
@@ -543,9 +647,7 @@ public class Tarzan_Main : MonoBehaviour
                 SPRA_Questions[i].name = Finalname[0];
                 await Task.CompletedTask;
             }
-        }
-
-       
+        }       
     }*/
 
 
@@ -632,16 +734,22 @@ public class Tarzan_Main : MonoBehaviour
         json.Temp_type_2(MainController.instance.STR_previewJsonAPI, STRL_difficulty, IL_numbers, STRL_questions, STRL_answers, STRL_options, STRL_questionID, STRL_instruction, STRL_quesitonAudios, STRL_optionAudios,
             STRL_instructionAudio, STRL_cover_img_link, STRL_Passagedetails);
 
+        I_optionCount = IL_numbers[3];
+
         STR_difficulty = STRL_difficulty[0];
         STR_instruction = STRL_instruction[0];
         MainController.instance.I_correctPoints = I_correctPoints = IL_numbers[1];
         I_wrongPoints = IL_numbers[2];
         MainController.instance.I_TotalQuestions = STRL_questions.Count;
 
-       
+        AD_questionAllocated = new AllocatedQuestions[IL_numbers[0]];
+        THI_AllocateQuestion();
+
         StartCoroutine(EN_getAudioClips());
         StartCoroutine(IN_CoverImage());
-        StartCoroutine(IMG_Options());
+        StartCoroutine(IMG_Question());
+        StartCoroutine(IMG_Option());
+        TEX_questionCount.text = (I_currentQuestionCount + 1) + "/" + STRL_questions.Count;
 
         // THI_createOptions();
     }
@@ -704,10 +812,62 @@ public class Tarzan_Main : MonoBehaviour
         {
             G_Player.SetActive(true);
             Frog_Follow.OBJ_followingCamera.B_canfollow = true;
-            THI_CloneLevel();
+            // THI_CloneLevel();
             
         }
-        
+    }
+
+    void THI_AllocateQuestion(){
+        float percent;
+        int questionCount = 0;
+        while(questionCount < AD_questionAllocated.Length){
+            for(int i=0; i < GA_mushrooms.Length; i++){
+                percent = Random.Range(1, 100);
+                if(percent >= F_quesAllocPer){
+                    // Debug.Log(GA_mushrooms[i].gameObject.name, GA_mushrooms[i].gameObject);
+                    AD_questionAllocated[questionCount] = new AllocatedQuestions();
+
+                    AD_questionAllocated[questionCount].selectedMushroom = GA_mushrooms[i].gameObject;
+
+                    for(int j=0; j < GA_mushrooms[i].gameObject.transform.childCount; j++){
+                        if(GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>()){
+                            Debug.Log("Mushroom Name : "+GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.name, GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject);
+
+                            AD_questionAllocated[questionCount].mushrooms.Add(GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>());
+                            GA_mushrooms[i].gameObject.transform.GetChild(j).gameObject.GetComponent<Mushroom>().B_questionALlocated = true;
+                        }
+                    }
+                    AD_questionAllocated[questionCount].I_questionID = questionCount;
+                    questionCount++;
+                    // Debug.Log("Question Count : "+questionCount);
+                    // Debug.Log("Current Ques Count : "+I_currentQuestionCount);
+                    if(!(questionCount < AD_questionAllocated.Length))
+                        break;
+                }
+            }
+        }
+    }
+
+    public void THI_DeAllocateQuestion(GameObject gameObjectInstanceID){
+        // Debug.Log("Jumped Mushroom : "+gameObjectInstanceID.gameObject.name+" "+gameObjectInstanceID.gameObject.GetInstanceID(), gameObjectInstanceID.gameObject);
+        for(int i=0; i < AD_questionAllocated.Length; i++){
+            // Debug.Log("Allocated Instance ID : "+AD_questionAllocated[i].selectedMushroom.GetInstanceID(), AD_questionAllocated[i].selectedMushroom);
+            if(AD_questionAllocated[i].selectedMushroom.GetInstanceID() == gameObjectInstanceID.GetInstanceID()){
+                for(int j=0; j < AD_questionAllocated[i].mushrooms.Count; j++){
+                    AD_questionAllocated[i].mushrooms[j].B_questionALlocated = false;
+                }
+                break;
+            }
+        }
     }
 }
 
+[System.Serializable]
+public class AllocatedQuestions{
+    public int I_questionID;
+    public GameObject selectedMushroom;
+    public List<Mushroom> mushrooms;
+    public AllocatedQuestions(){
+        mushrooms = new List<Mushroom>();
+    }
+}

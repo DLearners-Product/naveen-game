@@ -76,7 +76,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -14611,7 +14611,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -14635,7 +14635,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -14674,6 +14674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494392775081408
 GameObject:
   m_ObjectHideFlags: 0
@@ -14787,7 +14789,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -15120,7 +15122,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -15144,7 +15146,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -15183,6 +15185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494392848581006
 GameObject:
   m_ObjectHideFlags: 0
@@ -15259,7 +15263,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -15341,7 +15345,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -15428,7 +15432,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -15452,7 +15456,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -15491,6 +15495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494392947941409
 GameObject:
   m_ObjectHideFlags: 0
@@ -15567,7 +15573,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -15736,7 +15742,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -15760,7 +15766,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -15799,6 +15805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494392960760353
 GameObject:
   m_ObjectHideFlags: 0
@@ -15998,7 +16006,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16080,7 +16088,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16495,7 +16503,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16519,7 +16527,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -16558,6 +16566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393095971248
 GameObject:
   m_ObjectHideFlags: 0
@@ -16634,7 +16644,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16716,7 +16726,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16798,7 +16808,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -17213,7 +17223,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -17237,7 +17247,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -17276,6 +17286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393309582364
 GameObject:
   m_ObjectHideFlags: 0
@@ -17440,7 +17452,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -17464,7 +17476,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -17503,6 +17515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393350410552
 GameObject:
   m_ObjectHideFlags: 0
@@ -17666,7 +17680,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -17690,7 +17704,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -17729,6 +17743,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393426228550
 GameObject:
   m_ObjectHideFlags: 0
@@ -17805,7 +17821,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -17887,7 +17903,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18097,7 +18113,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18121,7 +18137,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -18160,6 +18176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393502510725
 GameObject:
   m_ObjectHideFlags: 0
@@ -18323,7 +18341,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18347,7 +18365,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -18386,6 +18404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393607505689
 GameObject:
   m_ObjectHideFlags: 0
@@ -18544,7 +18564,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18631,7 +18651,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18655,7 +18675,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -18694,6 +18714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393654116754
 GameObject:
   m_ObjectHideFlags: 0
@@ -18770,7 +18792,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18918,7 +18940,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18942,7 +18964,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -18981,6 +19003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393664013196
 GameObject:
   m_ObjectHideFlags: 0
@@ -19062,7 +19086,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -19086,7 +19110,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -19125,6 +19149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393670946893
 GameObject:
   m_ObjectHideFlags: 0
@@ -19206,7 +19232,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -19230,7 +19256,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -19269,6 +19295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393684944432
 GameObject:
   m_ObjectHideFlags: 0
@@ -19345,7 +19373,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -19551,7 +19579,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.11, y: 0.84}
+  m_Size: {x: 9.24, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -24197,7 +24225,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -24284,7 +24312,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -24308,7 +24336,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -24347,6 +24375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393866540569
 GameObject:
   m_ObjectHideFlags: 0
@@ -24428,7 +24458,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -24452,7 +24482,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -24491,6 +24521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393884197360
 GameObject:
   m_ObjectHideFlags: 0
@@ -24783,7 +24815,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -24807,7 +24839,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -24846,6 +24878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393951384101
 GameObject:
   m_ObjectHideFlags: 0
@@ -24927,7 +24961,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -24951,7 +24985,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -24990,6 +25024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494393961812339
 GameObject:
   m_ObjectHideFlags: 0
@@ -25066,7 +25102,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -25235,7 +25271,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -25259,7 +25295,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -25298,6 +25334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494394028973412
 GameObject:
   m_ObjectHideFlags: 0
@@ -25607,7 +25645,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -25631,7 +25669,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -25670,6 +25708,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494394148023111
 GameObject:
   m_ObjectHideFlags: 0
@@ -25746,7 +25786,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -25833,7 +25873,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -25857,7 +25897,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -25896,6 +25936,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494394156235689
 GameObject:
   m_ObjectHideFlags: 0
@@ -25972,7 +26014,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -26054,7 +26096,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -26141,7 +26183,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -26165,7 +26207,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -26204,6 +26246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494394313258152
 GameObject:
   m_ObjectHideFlags: 0
@@ -26280,7 +26324,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -26362,7 +26406,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -26567,7 +26611,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -26654,7 +26698,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -26678,7 +26722,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -26717,6 +26761,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494394436245417
 GameObject:
   m_ObjectHideFlags: 0
@@ -27248,7 +27294,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -27453,7 +27499,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -27535,7 +27581,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -27745,7 +27791,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -27769,7 +27815,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -27808,6 +27854,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494394621570324
 GameObject:
   m_ObjectHideFlags: 0
@@ -27889,7 +27937,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -27913,7 +27961,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -27952,6 +28000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494394637720940
 GameObject:
   m_ObjectHideFlags: 0
@@ -28151,7 +28201,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -28238,7 +28288,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -28262,7 +28312,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -28301,6 +28351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494394726724463
 GameObject:
   m_ObjectHideFlags: 0
@@ -28382,7 +28434,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -28406,7 +28458,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -28445,6 +28497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494394743598417
 GameObject:
   m_ObjectHideFlags: 0
@@ -28521,7 +28575,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -28603,7 +28657,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -28685,7 +28739,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -28977,7 +29031,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -29001,7 +29055,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -29040,6 +29094,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &1989494394855250500
 GameObject:
   m_ObjectHideFlags: 0
@@ -29121,7 +29177,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -29145,7 +29201,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -29184,6 +29240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &2038859664629357900
 GameObject:
   m_ObjectHideFlags: 0
@@ -29260,7 +29318,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33, y: 1.97}
+  m_Size: {x: 3.52, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -67875,7 +67933,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -67899,7 +67957,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -67938,6 +67996,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &7030121701168750114
 GameObject:
   m_ObjectHideFlags: 0
@@ -96915,7 +96975,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 2.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -96939,7 +96999,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.27, y: 2.66}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.27, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -96978,6 +97038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b01c96e27be1343bf21414b81224e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  B_questionALlocated: 0
+  spawnPosition: {fileID: 0}
 --- !u!1 &8937152920820222960
 GameObject:
   m_ObjectHideFlags: 0
