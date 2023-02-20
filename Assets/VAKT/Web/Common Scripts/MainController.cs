@@ -67,8 +67,8 @@ public class MainController : MonoBehaviour
         //  Debug.Log("WEB");
 #endif
 
-        // MOBILE = false;
-        // WEB = true;
+         MOBILE = false;
+         WEB = true;
         //if (MOBILE)
         //{
         //    STR_GameID = GameManager.instance.STR_selectedGameID;
@@ -82,8 +82,8 @@ public class MainController : MonoBehaviour
 
 
             // testing
-            //  STR_childID = "336";
-            //   mode = "preview";
+              STR_childID = "336";
+               mode = "preview";
 
             // Live ID's
             //  STR_GameID = "837";
@@ -142,7 +142,7 @@ public class MainController : MonoBehaviour
 
             //  STR_GameID = "203";  // Word Search
             //  STR_GameID = "205";   // true or false
-            //  STR_GameID = "206";   // find the water --> text text 4 options
+            STR_GameID = "206";   // find the water --> text text 4 options
             //  STR_GameID = "207";   // popcorn
             //    STR_GameID = "350";   // Board game
             //    STR_GameID = "354";   // bridge crossing

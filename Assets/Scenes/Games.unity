@@ -20861,6 +20861,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1205947597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205947598}
+  m_Layer: 0
+  m_Name: Tarzan (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1205947598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205947597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1208623520
 GameObject:
   m_ObjectHideFlags: 0
@@ -36906,7 +36936,7 @@ PrefabInstance:
     - target: {fileID: 776048730628194771, guid: 26fb2e92636030a498aad4a8895ddd8a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 776048730628194771, guid: 26fb2e92636030a498aad4a8895ddd8a,
         type: 3}
@@ -37174,7 +37204,22 @@ PrefabInstance:
     - target: {fileID: 1160539303540869911, guid: 24ce69c80896f3447b2f3956b868b20c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160539304493922622, guid: 24ce69c80896f3447b2f3956b868b20c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869001077447035075, guid: 24ce69c80896f3447b2f3956b868b20c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996109234732509016, guid: 24ce69c80896f3447b2f3956b868b20c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24ce69c80896f3447b2f3956b868b20c, type: 3}
@@ -37410,80 +37455,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a248f0d51e30691479379e62757eb9e1, type: 3}
---- !u!1001 &3429427142381291545
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937185, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937190, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_Name
-      value: Tarzan
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026323354185937190, guid: 8c0824cc9b4d8eb42af420e449afe2d2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8c0824cc9b4d8eb42af420e449afe2d2, type: 3}
 --- !u!1001 &3940815163042474318
 PrefabInstance:
   m_ObjectHideFlags: 0
