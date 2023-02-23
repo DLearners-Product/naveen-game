@@ -242,6 +242,15 @@ public class FW_Main : MonoBehaviour
 
     }
 
+    public void THI_collect()
+    {
+        AS_collecting.Play();
+        I_Points += 1;
+        TEX_points.text = I_Points.ToString();
+        TM_pointFx.text = "+1 points";
+        Invoke("THI_pointFxOff", 1f);
+    }
+
     
     IEnumerator Highlight()
     {

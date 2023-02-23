@@ -37201,25 +37201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FindingWater
       objectReference: {fileID: 0}
-    - target: {fileID: 1160539303540869911, guid: 24ce69c80896f3447b2f3956b868b20c,
+    - target: {fileID: 1160539304126557946, guid: 24ce69c80896f3447b2f3956b868b20c,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1160539304493922622, guid: 24ce69c80896f3447b2f3956b868b20c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1869001077447035075, guid: 24ce69c80896f3447b2f3956b868b20c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4996109234732509016, guid: 24ce69c80896f3447b2f3956b868b20c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_AnchoredPosition.y
+      value: -64.00001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24ce69c80896f3447b2f3956b868b20c, type: 3}

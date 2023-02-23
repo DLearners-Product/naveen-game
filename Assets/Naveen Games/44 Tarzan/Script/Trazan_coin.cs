@@ -12,7 +12,7 @@ public class Trazan_coin : MonoBehaviour
         if(collision.gameObject.tag=="Player")
         {
             // Debug.Log("Clone Effect");
-            Tarzan_Main.Instance.THI_CoinCollect();
+            FW_Main.Instance.THI_collect();
             Dummy = Instantiate(G_Effect, this.transform.position,Quaternion.identity);
             Dummy.transform.SetParent(this.transform.parent.transform, false);
             Dummy.transform.position = this.transform.position;
